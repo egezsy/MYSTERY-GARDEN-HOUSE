@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { prisma } from "@/lib/prisma";
+import { addContact } from "@/lib/db";
 
 const schema = z.object({
   name: z.string().min(2),
@@ -14,13 +14,11 @@ export async function POST(request: Request) {
     const json = await request.json();
     const data = schema.parse(json);
 
-    const message = await prisma.contactMessage.create({
-      data: {
-        name: data.name,
-        email: data.email,
-        phone: data.phone || null,
-        message: data.message,
-      },
+    const message = await addContact({
+      name: data.name,
+      email: data.email,
+      phone: data.phone || null,
+      message: data.message,
     });
 
     console.log(

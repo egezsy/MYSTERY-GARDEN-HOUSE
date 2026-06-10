@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { deleteContact } from "@/lib/db";
 import { isAdmin } from "@/lib/auth";
 
 export async function DELETE(
@@ -10,7 +10,10 @@ export async function DELETE(
     return NextResponse.json({ ok: false }, { status: 401 });
   }
   try {
-    await prisma.contactMessage.delete({ where: { id: params.id } });
+    const removed = await deleteContact(params.id);
+    if (!removed) {
+      return NextResponse.json({ ok: false }, { status: 404 });
+    }
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error("[messages:delete] error", error);

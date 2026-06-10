@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import type { Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/dictionaries";
-import { prisma } from "@/lib/prisma";
+import { getBookingByReference } from "@/lib/db";
 import { href, CONTACT } from "@/lib/nav";
 import { formatDate, nightsBetween } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -37,9 +37,7 @@ export default async function ConfirmationPage({
   const dict = getDictionary(locale);
   const ref = searchParams.ref;
 
-  const booking = ref
-    ? await prisma.booking.findUnique({ where: { reference: ref } })
-    : null;
+  const booking = ref ? await getBookingByReference(ref) : null;
 
   return (
     <section className="section-padding bg-cream pt-28 md:pt-32">

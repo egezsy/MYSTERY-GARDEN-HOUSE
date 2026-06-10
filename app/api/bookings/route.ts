@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { prisma } from "@/lib/prisma";
+import { addBooking, getBookings } from "@/lib/db";
 import { getRoom } from "@/lib/data/rooms";
 import { generateReference } from "@/lib/utils";
 import { sendBookingNotification } from "@/lib/email";
@@ -35,21 +35,18 @@ export async function POST(request: Request) {
       );
     }
 
-    const reference = generateReference();
-    const booking = await prisma.booking.create({
-      data: {
-        reference,
-        guestName: data.guestName,
-        email: data.email,
-        phone: data.phone,
-        roomId: data.roomId,
-        roomName: room.name,
-        checkIn: new Date(data.checkIn),
-        checkOut: new Date(data.checkOut),
-        guests: data.guests,
-        specialRequests: data.specialRequests || null,
-        status: "pending",
-      },
+    const booking = await addBooking({
+      reference: generateReference(),
+      guestName: data.guestName,
+      email: data.email,
+      phone: data.phone,
+      roomId: data.roomId,
+      roomName: room.name,
+      checkIn: new Date(data.checkIn).toISOString(),
+      checkOut: new Date(data.checkOut).toISOString(),
+      guests: data.guests,
+      specialRequests: data.specialRequests || null,
+      status: "pending",
     });
 
     await sendBookingNotification(booking);
@@ -72,8 +69,6 @@ export async function GET() {
   if (!isAdmin()) {
     return NextResponse.json({ ok: false }, { status: 401 });
   }
-  const bookings = await prisma.booking.findMany({
-    orderBy: { createdAt: "desc" },
-  });
+  const bookings = await getBookings();
   return NextResponse.json({ ok: true, bookings });
 }

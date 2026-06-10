@@ -11,6 +11,8 @@ yarn-error.log*
 .DS_Store
 *.tsbuildinfo
 next-env.d.ts
-/prisma/*.db
-/prisma/*.db-journal
+
+# JSON file storage — each deploy/clone starts fresh
+/data/
+
 .vercel

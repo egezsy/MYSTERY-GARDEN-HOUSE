@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getDictionary } from "@/lib/dictionaries";
-import { prisma } from "@/lib/prisma";
+import { getBookings, getContacts } from "@/lib/db";
 import { isAdmin } from "@/lib/auth";
 import { LoginForm } from "@/components/admin/login-form";
 import { Dashboard } from "@/components/admin/dashboard";
@@ -21,8 +21,8 @@ export default async function AdminPage() {
   }
 
   const [bookings, messages] = await Promise.all([
-    prisma.booking.findMany({ orderBy: { createdAt: "desc" } }),
-    prisma.contactMessage.findMany({ orderBy: { createdAt: "desc" } }),
+    getBookings(),
+    getContacts(),
   ]);
 
   return (
@@ -35,12 +35,12 @@ export default async function AdminPage() {
         email: b.email,
         phone: b.phone,
         roomName: b.roomName,
-        checkIn: b.checkIn.toISOString(),
-        checkOut: b.checkOut.toISOString(),
+        checkIn: b.checkIn,
+        checkOut: b.checkOut,
         guests: b.guests,
         specialRequests: b.specialRequests,
         status: b.status,
-        createdAt: b.createdAt.toISOString(),
+        createdAt: b.createdAt,
       }))}
       messages={messages.map((m) => ({
         id: m.id,
@@ -48,7 +48,7 @@ export default async function AdminPage() {
         email: m.email,
         phone: m.phone,
         message: m.message,
-        createdAt: m.createdAt.toISOString(),
+        createdAt: m.createdAt,
       }))}
     />
   );

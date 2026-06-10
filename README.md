@@ -10,7 +10,7 @@ online (request-based) booking system and an admin dashboard.
 - **Next.js 14** (App Router)
 - **Tailwind CSS** with a custom garden palette (`tailwind.config.ts`)
 - Hand-rolled **shadcn/ui-style** components (Button, Card, Input, Select, Dialog, Tabs, Sheet, Table…)
-- **Prisma ORM + SQLite**
+- **JSON file storage** (`lib/db.ts` → `data/*.json`) — no database server
 - **React Hook Form + Zod** validation
 - Custom **i18n** via `[lang]` route segment + JSON dictionaries
 - `next/image` optimisation, `next/font` (Playfair Display + Inter)
@@ -18,11 +18,13 @@ online (request-based) booking system and an admin dashboard.
 ## Getting Started
 
 ```bash
-npm install            # installs deps + runs prisma generate (postinstall)
-npm run db:push        # create the SQLite schema (prisma/dev.db)
-npm run db:seed        # optional: demo bookings + a message
+npm install            # install dependencies
 npm run dev            # http://localhost:3000  (redirects to /tr)
 ```
+
+Bookings and contact messages are persisted to `data/bookings.json` and
+`data/contacts.json`, created automatically on first write. The `data/` folder
+is gitignored, so each clone / deploy starts empty.
 
 Production:
 
@@ -37,7 +39,6 @@ Copy `.env.example` → `.env`:
 
 | Variable         | Default        | Purpose                       |
 | ---------------- | -------------- | ----------------------------- |
-| `DATABASE_URL`   | `file:./dev.db`| SQLite location               |
 | `ADMIN_USERNAME` | `admin`        | Admin dashboard login         |
 | `ADMIN_PASSWORD` | `garden2024`   | Admin dashboard login         |
 
@@ -60,8 +61,9 @@ preferred locale, defaulting to Turkish.
 
 1. Guest submits the booking form (`/[lang]/iletisim`). Validation enforces required
    fields and `check-out > check-in`.
-2. `POST /api/bookings` stores the request in SQLite with status `pending`, generates a
-   reference (e.g. `MGH-7F3K9`), and logs a notification email (stub in `lib/email.ts`).
+2. `POST /api/bookings` stores the request in `data/bookings.json` with status `pending`,
+   generates a reference (e.g. `MGH-7F3K9`), and logs a notification email (stub in
+   `lib/email.ts`).
 3. Guest is redirected to the confirmation page with their reference.
 4. Admin reviews requests at `/admin` and can **confirm / cancel / delete**.
 
@@ -76,5 +78,7 @@ real auth provider before production.
 
 ## Deployment (Vercel)
 
-`vercel.json` runs `prisma generate && prisma db push && next build`. Note SQLite is
-ephemeral on serverless — switch `DATABASE_URL` to a hosted Postgres/Turso for real use.
+`vercel.json` builds with `next build`. The JSON store writes to the project's `data/`
+folder, which is **read-only on serverless platforms like Vercel** (only `/tmp` is
+writable) — so writes there won't persist. For production, point the store at `/tmp`
+(edit `DATA_DIR` in `lib/db.ts`) for ephemeral storage, or swap in a hosted database.

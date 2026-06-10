@@ -28,12 +28,12 @@ export async function sendBookingNotification(booking: {
   email: string;
   phone: string;
   roomName: string;
-  checkIn: Date;
-  checkOut: Date;
+  checkIn: string;
+  checkOut: string;
   guests: number;
   specialRequests?: string | null;
 }) {
-  const fmt = (d: Date) => d.toISOString().split("T")[0];
+  const fmt = (d: string) => new Date(d).toISOString().split("T")[0];
   const notifyEmail =
     process.env.NOTIFY_EMAIL || "info@mysterygardenhouse.com";
 
