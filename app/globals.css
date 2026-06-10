@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+
+  /* Prevent horizontal scroll on any device */
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-max {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .accent-underline {
+    @apply relative inline-block pb-3;
+  }
+  .accent-underline::after {
+    content: "";
+    @apply absolute bottom-0 left-0 h-1 w-16 rounded-full bg-accent;
+  }
+  .accent-underline-center::after {
+    @apply left-1/2 -translate-x-1/2;
+  }
+
+  .label-eyebrow {
+    @apply mb-3 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-accent;
+  }
+}
+
+/* Hide scrollbar for horizontal swipe galleries while keeping function */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ============================================================
+   Hero animated mesh-gradient background (pure CSS)
+   ============================================================ */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  /* Static fallback gradient — visible if the mesh layer is disabled */
+  background: linear-gradient(135deg, #3d2817 0%, #5e4f6e 45%, #7b6b8d 70%, #f8f6f1 130%);
+}
+
+.hero-bg__mesh {
+  position: absolute;
+  inset: -30%;
+  background-color: #3d2817;
+  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(38% 38% at 22% 28%, rgba(123, 107, 141, 0.9), transparent 70%),
+    radial-gradient(42% 42% at 80% 18%, rgba(201, 169, 110, 0.45), transparent 70%),
+    radial-gradient(48% 48% at 76% 74%, rgba(248, 246, 241, 0.55), transparent 72%),
+    radial-gradient(46% 46% at 24% 80%, rgba(94, 79, 110, 0.85), transparent 72%),
+    radial-gradient(34% 34% at 52% 50%, rgba(123, 107, 141, 0.5), transparent 70%);
+  filter: blur(46px) saturate(1.1);
+  will-change: transform;
+  animation: heroMesh 15s ease-in-out infinite alternate;
+}
+
+@keyframes heroMesh {
+  0% {
+    transform: translate3d(-4%, -3%, 0) scale(1.05) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(3%, 2%, 0) scale(1.13) rotate(4deg);
+  }
+  100% {
+    transform: translate3d(2%, 4%, 0) scale(1.08) rotate(-3deg);
+  }
+}
+
+/* Organic noise grain */
+.hero-bg__noise {
+  position: absolute;
+  inset: 0;
+  background-size: 160px 160px;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Floating particles */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-particle {
+  position: absolute;
+  bottom: -8%;
+  border-radius: 9999px;
+  background: rgba(248, 246, 241, 0.85);
+  box-shadow: 0 0 6px rgba(248, 246, 241, 0.45);
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: heroFloat var(--duration, 18s) ease-in-out var(--delay, 0s) infinite;
+}
+
+@keyframes heroFloat {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  12% {
+    opacity: var(--opacity, 0.5);
+  }
+  88% {
+    opacity: var(--opacity, 0.5);
+  }
+  100% {
+    transform: translate3d(var(--drift, 20px), -112vh, 0);
+    opacity: 0;
+  }
+}
+
+/* Mobile / low-power fallback: keep the static blurred mesh, drop motion + particles */
+@media (max-width: 640px) {
+  .hero-bg__mesh {
+    animation: none;
+    transform: scale(1.1);
+  }
+  .hero-particles {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg__mesh {
+    animation: none;
+    transform: scale(1.1);
+  }
+  .hero-particles {
+    display: none;
+  }
+}

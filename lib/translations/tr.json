@@ -1,0 +1,249 @@
+{
+  "meta": {
+    "title": "Mystery Garden House — Butik Bahçe Konukevi",
+    "description": "Sisli bir lavanta bahçesinin kalbinde, gizemli ve davetkâr bir kaçamak. Bahçenin sırrını keşfedin."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "rooms": "Odalar",
+    "about": "Hakkımızda",
+    "gallery": "Galeri",
+    "contact": "İletişim",
+    "book": "Rezervasyon",
+    "menuLabel": "Menü",
+    "closeMenu": "Menüyü kapat"
+  },
+  "hero": {
+    "title": "Mystery Garden House",
+    "subtitle": "Bahçenin Sırrını Keşfedin",
+    "cta": "Rezervasyon Yapın",
+    "scroll": "Keşfetmek için kaydırın"
+  },
+  "story": {
+    "label": "Hikayemiz",
+    "heading": "Sisin İçinde Saklı Bir Bahçe",
+    "p1": "Mystery Garden House, alacakaranlıkta lavanta kokan bir bahçenin ortasında, zamanın yavaşladığı bir kaçamaktır. Her köşesi özenle tasarlanmış, doğanın huzuruyla zarif konforu bir araya getiren bir konukevi.",
+    "p2": "Sabahları kuş sesleriyle uyanın, gün boyu bahçenin patikalarında kaybolun, akşamları yıldızların altında sıcak bir çay yudumlayın. Burada her misafir, bahçenin kendi sırrını keşfeder.",
+    "cta": "Hikayemizi Okuyun"
+  },
+  "rooms": {
+    "label": "Odalarımız",
+    "heading": "Her Biri Bir Hikaye",
+    "subheading": "Doğanın kucağında, özenle tasarlanmış konaklama seçenekleri.",
+    "perNight": "/gece",
+    "guests": "kişi",
+    "details": "Detaylar",
+    "book": "Rezervasyon Yap",
+    "viewAll": "Tüm Odaları Gör",
+    "amenitiesLabel": "Oda Özellikleri",
+    "filters": {
+      "all": "Tümü",
+      "twoGuests": "2 Kişilik",
+      "family": "Aile / 4 Kişi",
+      "priceLow": "Fiyat: Düşük → Yüksek",
+      "priceHigh": "Fiyat: Yüksek → Düşük"
+    },
+    "capacityLabel": "Kapasite",
+    "priceLabel": "Fiyat"
+  },
+  "amenities": {
+    "label": "Sunduklarımız",
+    "heading": "Konforunuz İçin Her Şey",
+    "items": {
+      "wifi": { "title": "Ücretsiz WiFi", "desc": "Tüm alanlarda yüksek hızlı internet" },
+      "breakfast": { "title": "Bahçe Kahvaltısı", "desc": "Taze, organik ve yerel lezzetler" },
+      "garden": { "title": "Özel Bahçe", "desc": "Lavanta patikaları ve dinlenme köşeleri" },
+      "parking": { "title": "Ücretsiz Otopark", "desc": "Güvenli ve geniş park alanı" },
+      "jacuzzi": { "title": "Jakuzi", "desc": "Seçili odalarda özel jakuzi" },
+      "pet": { "title": "Evcil Hayvan Dostu", "desc": "Dört ayaklı dostlarınız da hoş geldiniz" }
+    }
+  },
+  "stats": {
+    "label": "Rakamlarla Biz",
+    "years": "Yıl Deneyim",
+    "rooms": "Özel Oda",
+    "guests": "Mutlu Misafir",
+    "rating": "Misafir Puanı"
+  },
+  "testimonials": {
+    "label": "Misafir Yorumları",
+    "heading": "Bahçeden Notlar",
+    "items": [
+      { "name": "Elif & Can", "location": "İstanbul", "text": "Hayatımızda kaldığımız en huzurlu yer. Sabah bahçede yapılan kahvaltı bir başkaydı. Mutlaka tekrar geleceğiz." },
+      { "name": "Sarah M.", "location": "Londra", "text": "Gerçek bir saklı cennet. Lavanta kokusu, sıcak karşılama ve mükemmel detaylar... Kelimeler yetersiz." },
+      { "name": "Mehmet Y.", "location": "Ankara", "text": "Treehouse Cabin'de geçirdiğimiz gece unutulmazdı. Ağaçların arasında uyanmak inanılmaz bir deneyim." }
+    ]
+  },
+  "ctaSection": {
+    "heading": "Bahçenin Sırrını Yaşamaya Hazır mısınız?",
+    "subheading": "Bugün rezervasyon yapın, alacakaranlığın büyüsünü keşfedin.",
+    "reserve": "Rezervasyon Yapın",
+    "call": "Bizi Arayın",
+    "whatsapp": "WhatsApp"
+  },
+  "footer": {
+    "tagline": "Sisli bir lavanta bahçesinde, gizemli ve davetkâr bir kaçamak.",
+    "explore": "Keşfet",
+    "contact": "İletişim",
+    "newsletter": "Bültenimize Katılın",
+    "newsletterDesc": "Özel teklifler ve bahçeden haberler için.",
+    "emailPlaceholder": "E-posta adresiniz",
+    "subscribe": "Abone Ol",
+    "subscribed": "Teşekkürler! Aboneliğiniz alındı.",
+    "rights": "Tüm hakları saklıdır.",
+    "address": "Bahçe Mahallesi, Lavanta Sokak No:7, Şirince, İzmir"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "subtitle": "Bir bahçenin, bir evin ve sayısız anının hikayesi.",
+    "philosophyLabel": "Felsefemiz",
+    "philosophyHeading": "Doğayla Uyum İçinde Yaşamak",
+    "philosophyP1": "Mystery Garden House, doğaya saygılı, sürdürülebilir ve sade bir yaşam anlayışıyla kuruldu. Bahçemizdeki her bitki elimizle ekildi, her taş özenle yerleştirildi.",
+    "philosophyP2": "Amacımız, misafirlerimize sadece bir konaklama değil; doğayla yeniden bağ kurabilecekleri, dinlenebilecekleri ve kendilerini yeniden keşfedebilecekleri bir alan sunmak.",
+    "hostLabel": "Ev Sahibiniz",
+    "hostName": "Ayşe Deniz",
+    "hostRole": "Kurucu & Ev Sahibi",
+    "hostBio": "On yıldır bu bahçenin bekçiliğini yapıyorum. Şehir hayatını geride bırakıp doğaya döndüğümde, bu evi bir sığınak olarak hayal etmiştim. Bugün, bu sırrı sizlerle paylaşmaktan mutluluk duyuyorum.",
+    "galleryLabel": "Bahçeden Kareler",
+    "locationLabel": "Konum",
+    "locationHeading": "Bizi Bulun",
+    "locationDesc": "Şirince'nin sakin tepelerinde, doğayla iç içe bir konumda."
+  },
+  "gallery": {
+    "title": "Galeri",
+    "subtitle": "Bahçeden, odalardan ve detaylardan kareler.",
+    "categories": {
+      "all": "Tümü",
+      "garden": "Bahçe",
+      "rooms": "Odalar",
+      "food": "Lezzetler",
+      "details": "Detaylar"
+    },
+    "close": "Kapat",
+    "previous": "Önceki",
+    "next": "Sonraki"
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Sorularınız ve rezervasyonlarınız için bize ulaşın.",
+    "infoHeading": "İletişim Bilgileri",
+    "address": "Adres",
+    "addressValue": "Bahçe Mahallesi, Lavanta Sokak No:7, Şirince, İzmir",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "whatsapp": "WhatsApp",
+    "hours": "Çalışma Saatleri",
+    "hoursValue": "Her gün 08:00 — 22:00",
+    "instagramLabel": "Bizi Instagram'da Takip Edin",
+    "mapLabel": "Harita"
+  },
+  "contactForm": {
+    "heading": "Bize Yazın",
+    "name": "Adınız Soyadınız",
+    "namePlaceholder": "Adınız",
+    "email": "E-posta",
+    "emailPlaceholder": "ornek@email.com",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5xx xxx xx xx",
+    "message": "Mesajınız",
+    "messagePlaceholder": "Bize iletmek istedikleriniz...",
+    "submit": "Mesaj Gönder",
+    "sending": "Gönderiliyor...",
+    "success": "Mesajınız alındı! En kısa sürede dönüş yapacağız.",
+    "error": "Bir hata oluştu. Lütfen tekrar deneyin."
+  },
+  "bookingForm": {
+    "heading": "Rezervasyon Talebi",
+    "subheading": "Ödeme alınmaz — talebinizi inceleyip size dönüş yapacağız.",
+    "name": "Adınız Soyadınız",
+    "namePlaceholder": "Adınız",
+    "email": "E-posta",
+    "emailPlaceholder": "ornek@email.com",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 5xx xxx xx xx",
+    "checkIn": "Giriş Tarihi",
+    "checkOut": "Çıkış Tarihi",
+    "room": "Oda Seçimi",
+    "roomPlaceholder": "Bir oda seçin",
+    "guests": "Misafir Sayısı",
+    "specialRequests": "Özel İstekler",
+    "specialRequestsPlaceholder": "Varış saati, özel günler, beslenme tercihleri...",
+    "nights": "gece",
+    "estimatedTotal": "Tahmini Toplam",
+    "submit": "Rezervasyon Talebi Gönder",
+    "submitting": "Gönderiliyor...",
+    "success": "Rezervasyon talebiniz alındı!",
+    "error": "Bir hata oluştu. Lütfen tekrar deneyin.",
+    "errors": {
+      "required": "Bu alan zorunludur",
+      "email": "Geçerli bir e-posta girin",
+      "dateOrder": "Çıkış tarihi giriş tarihinden sonra olmalıdır",
+      "pastDate": "Giriş tarihi bugünden önce olamaz"
+    }
+  },
+  "confirmation": {
+    "title": "Rezervasyon Talebiniz Alındı",
+    "subtitle": "Bahçenin kapıları sizin için aralanıyor.",
+    "thankYou": "Teşekkür ederiz! Talebinizi aldık ve en kısa sürede sizinle iletişime geçeceğiz.",
+    "referenceLabel": "Rezervasyon Referansınız",
+    "summaryHeading": "Rezervasyon Özeti",
+    "guest": "Misafir",
+    "room": "Oda",
+    "checkIn": "Giriş",
+    "checkOut": "Çıkış",
+    "guests": "Misafir Sayısı",
+    "nights": "Gece",
+    "status": "Durum",
+    "reminderHeading": "Sorularınız mı var?",
+    "reminderDesc": "Aşağıdaki kanallardan bize her zaman ulaşabilirsiniz.",
+    "backHome": "Ana Sayfaya Dön",
+    "noBooking": "Rezervasyon bilgisi bulunamadı. Lütfen rezervasyon formunu doldurun.",
+    "goToBooking": "Rezervasyon Yap"
+  },
+  "status": {
+    "pending": "Beklemede",
+    "confirmed": "Onaylandı",
+    "cancelled": "İptal Edildi"
+  },
+  "admin": {
+    "loginTitle": "Yönetim Paneli",
+    "loginSubtitle": "Devam etmek için giriş yapın",
+    "username": "Kullanıcı Adı",
+    "password": "Şifre",
+    "login": "Giriş Yap",
+    "loginError": "Kullanıcı adı veya şifre hatalı",
+    "logout": "Çıkış Yap",
+    "dashboardTitle": "Yönetim Paneli",
+    "statsTotal": "Toplam Rezervasyon",
+    "statsPending": "Beklemede",
+    "statsConfirmed": "Onaylandı",
+    "statsMessages": "Mesajlar",
+    "bookingsTab": "Rezervasyonlar",
+    "messagesTab": "Mesajlar",
+    "filterAll": "Tümü",
+    "tableRef": "Referans",
+    "tableDate": "Tarih",
+    "tableGuest": "Misafir",
+    "tableRoom": "Oda",
+    "tableCheckIn": "Giriş",
+    "tableCheckOut": "Çıkış",
+    "tableGuests": "Kişi",
+    "tableStatus": "Durum",
+    "tableActions": "İşlemler",
+    "tableContact": "İletişim",
+    "tableMessage": "Mesaj",
+    "confirm": "Onayla",
+    "cancel": "İptal Et",
+    "delete": "Sil",
+    "view": "Görüntüle",
+    "noBookings": "Henüz rezervasyon yok.",
+    "noMessages": "Henüz mesaj yok.",
+    "confirmDelete": "Bu kaydı silmek istediğinizden emin misiniz?",
+    "details": "Detaylar"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "backHome": "Ana Sayfaya Dön",
+    "currency": "₺"
+  }
+}
