@@ -5,13 +5,16 @@ import { randomUUID } from "crypto";
 /**
  * Tiny JSON-file database (replaces Prisma/SQLite).
  *
- * Data lives in `data/bookings.json` and `data/contacts.json` at the project
- * root. The `data/` folder is gitignored, so every deploy / fresh clone starts
- * empty. Writes are serialised through an in-process queue so concurrent
- * requests don't clobber each other.
+ * Locally, data lives in `./data/bookings.json` and `./data/contacts.json` at
+ * the project root. The `data/` folder is gitignored, so every deploy / fresh
+ * clone starts empty.
  *
- * Note: on read-only serverless filesystems (e.g. Vercel) only `/tmp` is
- * writable — point `DATA_DIR` there or use a hosted store for production writes.
+ * On Vercel / production the project filesystem is read-only — only `/tmp` is
+ * writable — so we store under `/tmp/data/` instead. This is ephemeral (cleared
+ * between deploys / cold starts), which matches the "starts fresh" model.
+ *
+ * Writes are serialised through an in-process queue so concurrent requests
+ * don't clobber each other.
  */
 
 export type BookingStatus = "pending" | "confirmed" | "cancelled";
@@ -43,7 +46,12 @@ export interface ContactMessage {
   createdAt: string;
 }
 
-const DATA_DIR = path.join(process.cwd(), "data");
+// On Vercel/serverless the project dir is read-only; only /tmp is writable.
+const USE_TMP =
+  process.env.VERCEL === "1" || process.env.NODE_ENV === "production";
+const DATA_DIR = USE_TMP
+  ? path.join("/tmp", "data")
+  : path.join(process.cwd(), "data");
 const BOOKINGS_FILE = path.join(DATA_DIR, "bookings.json");
 const CONTACTS_FILE = path.join(DATA_DIR, "contacts.json");
 
