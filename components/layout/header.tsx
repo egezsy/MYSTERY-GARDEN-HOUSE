@@ -27,19 +27,35 @@ export function Header({
 }) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
   const links = mainNav(locale, dict);
 
+  // The navbar is a fixed overlay, so content scrolls *under* it. To stop it
+  // from permanently covering content while reading, auto-hide it on
+  // scroll-down and reveal it on scroll-up (native-app pattern). Near the top
+  // it always stays visible.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 20);
+      if (y <= 80 || y < lastY - 4) {
+        setHidden(false); // at top or scrolling up -> show
+      } else if (y > lastY + 4) {
+        setHidden(true); // scrolling down past the navbar -> hide
+      }
+      lastY = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close the mobile sheet on navigation
+  // Close the mobile sheet and reveal the navbar on navigation
   useEffect(() => {
     setOpen(false);
+    setHidden(false);
   }, [pathname]);
 
   const isActive = (linkHref: string) =>
@@ -50,10 +66,12 @@ export function Header({
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300 will-change-transform",
         scrolled
           ? "bg-primary/95 shadow-lg backdrop-blur-md"
           : "bg-gradient-to-b from-primary-dark/60 to-transparent",
+        // Keep visible while the mobile menu is open
+        hidden && !open ? "-translate-y-full" : "translate-y-0",
       )}
     >
       <div className="container-max flex h-16 items-center justify-between gap-3 md:h-20">

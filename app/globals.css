@@ -5,6 +5,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Anchor jumps, focus scrolls and router scroll-restoration all land
+       below the fixed navbar (~80px) instead of underneath it. */
+    scroll-padding-top: 5rem;
     /* Keep tap latency low and disable double-tap zoom on interactive UI */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
