@@ -39,7 +39,7 @@ export function NewsletterForm({ dict }: { dict: Dictionary }) {
       <button
         type="submit"
         aria-label={dict.footer.subscribe}
-        className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md bg-accent text-white transition-colors hover:bg-accent-dark"
+        className="tap flex min-h-[48px] min-w-[48px] items-center justify-center rounded-md bg-accent text-white transition-colors hover:bg-accent-dark active:bg-accent-dark"
       >
         <Send className="h-5 w-5" />
       </button>

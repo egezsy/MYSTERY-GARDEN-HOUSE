@@ -29,7 +29,7 @@ export function CtaSection({
         className="object-cover"
       />
       <div className="absolute inset-0 bg-primary-dark/70" />
-      <Reveal className="container-max relative z-10 flex flex-col items-center py-20 text-center text-white md:py-28">
+      <Reveal className="container-max relative z-10 flex flex-col items-center py-16 text-center text-white md:py-24 lg:py-28">
         <h2 className="max-w-3xl font-serif text-3xl font-bold sm:text-4xl lg:text-5xl">
           {dict.ctaSection.heading}
         </h2>

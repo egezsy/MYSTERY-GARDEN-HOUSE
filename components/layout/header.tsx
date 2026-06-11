@@ -81,7 +81,7 @@ export function Header({
           className="flex items-center gap-2 text-white"
         >
           <Flower2 className="h-6 w-6 text-accent-light md:h-7 md:w-7" />
-          <span className="font-serif text-lg font-semibold leading-tight md:text-xl">
+          <span className="whitespace-nowrap font-serif text-lg font-semibold leading-tight md:text-xl">
             Mystery Garden
           </span>
         </Link>

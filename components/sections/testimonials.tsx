@@ -16,11 +16,9 @@ export function Testimonials({ dict }: { dict: Dictionary }) {
   return (
     <section className="section-padding bg-primary text-white">
       <div className="container-max">
-        <Reveal className="mx-auto mb-10 max-w-2xl text-center">
-          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-accent-light">
-            {dict.testimonials.label}
-          </span>
-          <h2 className="font-serif text-3xl font-bold sm:text-4xl">
+        <Reveal className="mx-auto mb-12 max-w-2xl text-center">
+          <span className="label-eyebrow-light">{dict.testimonials.label}</span>
+          <h2 className="accent-underline accent-underline-center font-serif text-3xl font-bold sm:text-4xl">
             {dict.testimonials.heading}
           </h2>
         </Reveal>

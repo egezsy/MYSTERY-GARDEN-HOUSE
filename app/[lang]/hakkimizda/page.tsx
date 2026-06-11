@@ -91,7 +91,7 @@ export default function AboutPage({ params }: { params: { lang: Locale } }) {
       {/* Gallery preview */}
       <section className="section-padding bg-cream">
         <div className="container-max">
-          <div className="mb-10 text-center">
+          <div className="mb-12 text-center">
             <span className="label-eyebrow">{dict.about.galleryLabel}</span>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
@@ -119,7 +119,7 @@ export default function AboutPage({ params }: { params: { lang: Locale } }) {
       {/* Location */}
       <section className="section-padding bg-stone">
         <div className="container-max">
-          <div className="mb-8 text-center">
+          <div className="mx-auto mb-12 max-w-2xl text-center">
             <span className="label-eyebrow">{dict.about.locationLabel}</span>
             <h2 className="accent-underline accent-underline-center font-serif text-3xl font-bold text-primary sm:text-4xl">
               {dict.about.locationHeading}

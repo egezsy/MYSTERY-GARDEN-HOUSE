@@ -109,6 +109,10 @@
   .label-eyebrow {
     @apply mb-3 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-accent;
   }
+  /* Same eyebrow, tuned for dark/primary backgrounds */
+  .label-eyebrow-light {
+    @apply mb-3 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-accent-light;
+  }
 }
 
 /* Hide scrollbar for horizontal swipe galleries while keeping function */

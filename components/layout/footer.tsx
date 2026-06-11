@@ -72,7 +72,7 @@ export function Footer({
           <h3 className="font-serif text-lg font-semibold">
             {dict.footer.explore}
           </h3>
-          <ul className="space-y-2.5">
+          <ul className="space-y-3">
             {links.map((link) => (
               <li key={link.key}>
                 <Link
