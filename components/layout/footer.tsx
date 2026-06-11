@@ -23,7 +23,7 @@ export function Footer({
   const links = mainNav(locale, dict);
 
   return (
-    <footer className="bg-primary pb-[calc(76px+env(safe-area-inset-bottom))] text-white lg:pb-0">
+    <footer className="bg-primary pb-[env(safe-area-inset-bottom)] text-white">
       <div className="container-max grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4 lg:py-16">
         {/* Brand */}
         <div className="space-y-4">
