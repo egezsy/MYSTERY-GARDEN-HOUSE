@@ -30,28 +30,51 @@ const SheetContent = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content> & {
     side?: "right" | "left";
   }
->(({ className, children, side = "right", ...props }, ref) => (
-  <SheetPortal>
-    <SheetOverlay />
-    <DialogPrimitive.Content
-      ref={ref}
-      className={cn(
-        "fixed z-50 flex h-full w-[85%] max-w-sm flex-col gap-6 bg-primary p-6 text-white shadow-xl transition ease-in-out data-[state=open]:duration-300 data-[state=closed]:duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out",
-        side === "right"
-          ? "inset-y-0 right-0 data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right"
-          : "inset-y-0 left-0 data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left",
-        className,
-      )}
-      {...props}
-    >
-      {children}
-      <DialogPrimitive.Close className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent focus:outline-none">
-        <X className="h-5 w-5" />
-        <span className="sr-only">Close</span>
-      </DialogPrimitive.Close>
-    </DialogPrimitive.Content>
-  </SheetPortal>
-));
+>(({ className, children, side = "right", ...props }, ref) => {
+  // Swipe toward the panel's anchored edge to dismiss (native drawer feel).
+  const closeRef = React.useRef<HTMLButtonElement>(null);
+  const startX = React.useRef<number | null>(null);
+
+  return (
+    <SheetPortal>
+      <SheetOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed z-50 flex h-full w-[85%] max-w-sm flex-col gap-6 bg-primary p-6 text-white shadow-xl transition ease-in-out data-[state=open]:duration-300 data-[state=closed]:duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out",
+          side === "right"
+            ? "inset-y-0 right-0 data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right"
+            : "inset-y-0 left-0 data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left",
+          className,
+        )}
+        onTouchStart={(e) => {
+          startX.current = e.touches[0].clientX;
+        }}
+        onTouchEnd={(e) => {
+          if (startX.current === null) return;
+          const dx = e.changedTouches[0].clientX - startX.current;
+          startX.current = null;
+          if (
+            (side === "right" && dx > 70) ||
+            (side === "left" && dx < -70)
+          ) {
+            closeRef.current?.click();
+          }
+        }}
+        {...props}
+      >
+        {children}
+        <DialogPrimitive.Close
+          ref={closeRef}
+          className="absolute right-4 top-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent active:scale-95 focus:outline-none"
+        >
+          <X className="h-5 w-5" />
+          <span className="sr-only">Close</span>
+        </DialogPrimitive.Close>
+      </DialogPrimitive.Content>
+    </SheetPortal>
+  );
+});
 SheetContent.displayName = DialogPrimitive.Content.displayName;
 
 const SheetTitle = React.forwardRef<

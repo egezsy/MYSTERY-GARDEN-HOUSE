@@ -27,7 +27,18 @@ export function Testimonials({ dict }: { dict: Dictionary }) {
 
         <div className="relative mx-auto max-w-3xl">
           <Quote className="mx-auto mb-6 h-10 w-10 text-accent-light" />
-          <div className="min-h-[180px] text-center sm:min-h-[150px]">
+          {/* Swipe left/right to navigate on touch devices */}
+          <motion.div
+            className="min-h-[180px] cursor-grab touch-pan-y text-center active:cursor-grabbing sm:min-h-[150px]"
+            drag="x"
+            dragSnapToOrigin
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.2}
+            onDragEnd={(_, info) => {
+              if (info.offset.x < -60) go(1);
+              else if (info.offset.x > 60) go(-1);
+            }}
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
@@ -49,13 +60,13 @@ export function Testimonials({ dict }: { dict: Dictionary }) {
                 </div>
               </motion.div>
             </AnimatePresence>
-          </div>
+          </motion.div>
 
           <div className="mt-8 flex items-center justify-center gap-4">
             <button
               onClick={() => go(-1)}
               aria-label={dict.gallery.previous}
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-accent"
+              className="tap flex h-12 w-12 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-accent active:bg-accent"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -74,7 +85,7 @@ export function Testimonials({ dict }: { dict: Dictionary }) {
             <button
               onClick={() => go(1)}
               aria-label={dict.gallery.next}
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-accent"
+              className="tap flex h-12 w-12 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-accent active:bg-accent"
             >
               <ChevronRight className="h-5 w-5" />
             </button>

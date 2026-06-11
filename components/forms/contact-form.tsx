@@ -30,7 +30,10 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<Values>({ resolver: zodResolver(schema) });
+  } = useForm<Values>({
+    resolver: zodResolver(schema),
+    mode: "onTouched",
+  });
 
   async function onSubmit(values: Values) {
     setStatus("sending");
@@ -68,7 +71,12 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
 
       <div className="space-y-1.5">
         <Label htmlFor="c-name">{t.name}</Label>
-        <Input id="c-name" placeholder={t.namePlaceholder} {...register("name")} />
+        <Input
+          id="c-name"
+          autoComplete="name"
+          placeholder={t.namePlaceholder}
+          {...register("name")}
+        />
         {errors.name && (
           <p className="text-sm text-destructive">{errors.name.message}</p>
         )}
@@ -81,6 +89,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
             id="c-email"
             type="email"
             inputMode="email"
+            autoComplete="email"
             placeholder={t.emailPlaceholder}
             {...register("email")}
           />
@@ -94,6 +103,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
             id="c-phone"
             type="tel"
             inputMode="tel"
+            autoComplete="tel"
             placeholder={t.phonePlaceholder}
             {...register("phone")}
           />

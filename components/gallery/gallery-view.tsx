@@ -130,21 +130,33 @@ export function GalleryView({
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
-          <div
-            className="relative h-[80vh] w-full max-w-4xl"
+          <motion.div
+            key={lightbox}
+            className="relative h-[80vh] w-full max-w-4xl touch-pan-y"
             onClick={(e) => e.stopPropagation()}
+            drag="x"
+            dragSnapToOrigin
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.18}
+            onDragEnd={(_, info) => {
+              if (info.offset.x < -60) move(1);
+              else if (info.offset.x > 60) move(-1);
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.25 }}
           >
             <Image
               src={images[lightbox].src}
               alt={images[lightbox].alt[locale]}
               fill
               sizes="100vw"
-              className="object-contain"
+              className="pointer-events-none object-contain"
             />
             <p className="absolute -bottom-9 left-0 right-0 text-center text-sm text-white/80">
               {images[lightbox].alt[locale]}
             </p>
-          </div>
+          </motion.div>
           <button
             onClick={(e) => {
               e.stopPropagation();

@@ -23,7 +23,7 @@ export function Footer({
   const links = mainNav(locale, dict);
 
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-primary pb-[76px] text-white lg:pb-0">
       <div className="container-max grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4 lg:py-16">
         {/* Brand */}
         <div className="space-y-4">
@@ -42,7 +42,7 @@ export function Footer({
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent"
+              className="tap flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent active:bg-accent"
             >
               <Instagram className="h-5 w-5" />
             </a>
@@ -51,7 +51,7 @@ export function Footer({
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent"
+              className="tap flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent active:bg-accent"
             >
               <Facebook className="h-5 w-5" />
             </a>
@@ -60,7 +60,7 @@ export function Footer({
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent"
+              className="tap flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent active:bg-accent"
             >
               <MessageCircle className="h-5 w-5" />
             </a>

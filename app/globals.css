@@ -5,12 +5,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Keep tap latency low and disable double-tap zoom on interactive UI */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-size: 16px;
+    line-height: 1.6;
     text-rendering: optimizeLegibility;
+    /* Respect device notches / home-indicator on the sides */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 
   h1,
@@ -18,6 +25,32 @@
   h3,
   h4 {
     @apply font-serif;
+    line-height: 1.2;
+  }
+
+  /* Fast, predictable taps; no grey iOS tap flash */
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea,
+  summary {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Inputs at 16px+ so iOS never zooms the viewport on focus */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  /* Visible focus only for keyboard users */
+  :focus-visible {
+    outline: 2px solid #7b6b8d;
+    outline-offset: 2px;
   }
 
   /* Prevent horizontal scroll on any device */
@@ -30,11 +63,24 @@
 
 @layer components {
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-12 md:py-20 lg:py-24;
   }
 
   .container-max {
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Bottom safe-area inset (sticky bars, footers) */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-safe {
+    bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Tactile press feedback on touch devices */
+  .tap {
+    @apply transition-transform duration-100 active:scale-[0.97];
   }
 
   .accent-underline {
@@ -164,5 +210,15 @@
   }
   .hero-particles {
     display: none;
+  }
+
+  /* Global safety net for any CSS animation/transition (non-Framer) */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }

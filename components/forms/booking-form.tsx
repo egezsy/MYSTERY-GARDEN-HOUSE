@@ -72,6 +72,7 @@ export function BookingForm({
     formState: { errors, isSubmitting },
   } = useForm<Values>({
     resolver: zodResolver(schema),
+    mode: "onTouched",
     defaultValues: {
       guestName: "",
       email: "",
@@ -125,6 +126,7 @@ export function BookingForm({
         <Label htmlFor="b-name">{t.name}</Label>
         <Input
           id="b-name"
+          autoComplete="name"
           placeholder={t.namePlaceholder}
           {...register("guestName")}
         />
@@ -140,6 +142,7 @@ export function BookingForm({
             id="b-email"
             type="email"
             inputMode="email"
+            autoComplete="email"
             placeholder={t.emailPlaceholder}
             {...register("email")}
           />
@@ -153,6 +156,7 @@ export function BookingForm({
             id="b-phone"
             type="tel"
             inputMode="tel"
+            autoComplete="tel"
             placeholder={t.phonePlaceholder}
             {...register("phone")}
           />

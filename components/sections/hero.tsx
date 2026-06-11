@@ -64,7 +64,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           Şirince · İzmir
         </motion.span>
 
-        <h1 className="font-serif text-3xl font-bold leading-tight drop-shadow-md sm:text-5xl lg:text-6xl">
+        <h1 className="font-serif text-2xl font-bold leading-tight drop-shadow-md xs:text-3xl sm:text-5xl lg:text-6xl">
           <RevealText text={dict.hero.title} onLoad delay={0.15} />
         </h1>
 

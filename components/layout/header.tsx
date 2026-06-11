@@ -101,7 +101,7 @@ export function Header({
             <SheetTrigger asChild className="lg:hidden">
               <button
                 aria-label={dict.nav.menuLabel}
-                className="flex h-11 w-11 items-center justify-center rounded-md text-white transition-colors hover:bg-white/10"
+                className="tap flex h-12 w-12 items-center justify-center rounded-md text-white transition-colors hover:bg-white/10 active:bg-white/10"
               >
                 <Menu className="h-6 w-6" />
               </button>

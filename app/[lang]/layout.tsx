@@ -4,6 +4,7 @@ import { i18n, isValidLocale, type Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/dictionaries";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { MobileCta } from "@/components/layout/mobile-cta";
 import { MotionProvider } from "@/components/motion/motion-provider";
 
 export function generateStaticParams() {
@@ -41,6 +42,7 @@ export default function LangLayout({
         <main className="flex-1">{children}</main>
       </MotionProvider>
       <Footer locale={locale} dict={dict} />
+      <MobileCta locale={locale} dict={dict} />
     </div>
   );
 }
