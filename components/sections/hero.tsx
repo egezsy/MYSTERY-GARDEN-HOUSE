@@ -81,7 +81,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.95 }}
-          className="mt-9 flex w-full max-w-xs flex-col gap-3 sm:max-w-none sm:flex-row"
+          className="mt-9 flex w-full max-w-xs flex-col gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:justify-center"
         >
           <Magnetic className="w-full sm:w-auto">
             <Button asChild variant="accent" size="lg" className="w-full sm:w-auto">

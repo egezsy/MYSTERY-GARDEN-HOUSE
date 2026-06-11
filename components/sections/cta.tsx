@@ -36,7 +36,7 @@ export function CtaSection({
         <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
           {dict.ctaSection.subheading}
         </p>
-        <div className="mt-9 flex w-full max-w-xs flex-col gap-3 sm:max-w-none sm:flex-row">
+        <div className="mt-9 flex w-full max-w-xs flex-col gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:justify-center">
           <Button
             asChild
             variant="accent"
