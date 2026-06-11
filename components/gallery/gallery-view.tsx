@@ -89,7 +89,7 @@ export function GalleryView({
               ease: [0.22, 1, 0.36, 1],
               delay: (i % 4) * 0.08,
             }}
-            className="group relative mb-3 block w-full overflow-hidden rounded-lg sm:mb-4"
+            className="group relative mb-3 block w-full overflow-hidden rounded-xl sm:mb-4 md:rounded-2xl"
           >
             <Image
               src={img.src}

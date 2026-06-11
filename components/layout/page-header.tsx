@@ -24,7 +24,7 @@ export function PageHeader({
         className="object-cover"
       />
       <div className="absolute inset-0 bg-primary-dark/65" />
-      <div className="container-max relative z-10 py-16 text-center text-white">
+      <div className="container-max relative z-10 py-12 text-center text-white md:py-16">
         <h1 className="font-serif text-3xl font-bold sm:text-4xl md:text-5xl">
           <RevealText text={title} onLoad />
         </h1>

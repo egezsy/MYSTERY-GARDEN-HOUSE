@@ -30,7 +30,7 @@ export function RoomCard({
   dict: Dictionary;
 }) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-lg border border-border bg-cream shadow-sm transition-shadow hover:shadow-lg">
+    <article className="group flex flex-col overflow-hidden rounded-xl border border-border bg-cream shadow-sm transition-shadow hover:shadow-lg md:rounded-2xl">
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
           src={room.image}

@@ -33,7 +33,7 @@ export default function AboutPage({ params }: { params: { lang: Locale } }) {
       {/* Philosophy */}
       <section className="section-padding bg-cream">
         <div className="container-max grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-md">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-xl shadow-md md:rounded-2xl">
             <Image
               src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1000&q=80"
               alt={dict.about.philosophyHeading}
@@ -99,7 +99,7 @@ export default function AboutPage({ params }: { params: { lang: Locale } }) {
               <Reveal
                 key={img.src}
                 delay={(i % 3) * 0.08}
-                className="relative aspect-square overflow-hidden rounded-lg"
+                className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl"
               >
                 <Image
                   src={img.src}
@@ -129,7 +129,7 @@ export default function AboutPage({ params }: { params: { lang: Locale } }) {
               {dict.about.locationDesc}
             </p>
           </div>
-          <div className="overflow-hidden rounded-lg border border-border shadow-md">
+          <div className="overflow-hidden rounded-xl border border-border shadow-md md:rounded-2xl">
             <iframe
               title={dict.contact.mapLabel}
               src="https://www.openstreetmap.org/export/embed.html?bbox=27.41%2C37.94%2C27.45%2C37.96&layer=mapnik&marker=37.95%2C27.43"

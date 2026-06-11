@@ -36,8 +36,13 @@ export function CtaSection({
         <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
           {dict.ctaSection.subheading}
         </p>
-        <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-          <Button asChild variant="accent" size="lg">
+        <div className="mt-9 flex w-full max-w-xs flex-col gap-3 sm:max-w-none sm:flex-row">
+          <Button
+            asChild
+            variant="accent"
+            size="lg"
+            className="w-full sm:w-auto"
+          >
             <Link href={href(locale, "contact")}>
               {dict.ctaSection.reserve}
             </Link>
@@ -45,14 +50,14 @@ export function CtaSection({
           <Button
             asChild
             size="lg"
-            className="bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
+            className="w-full bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 sm:w-auto"
           >
             <a href={CONTACT.phoneHref}>
               <Phone className="h-5 w-5" />
               {dict.ctaSection.call}
             </a>
           </Button>
-          <Button asChild size="lg" variant="gold">
+          <Button asChild size="lg" variant="gold" className="w-full sm:w-auto">
             <a
               href={CONTACT.whatsappHref}
               target="_blank"

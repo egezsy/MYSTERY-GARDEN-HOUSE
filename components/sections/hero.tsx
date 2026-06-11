@@ -81,18 +81,18 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.95 }}
-          className="mt-9 flex flex-col gap-3 sm:flex-row"
+          className="mt-9 flex w-full max-w-xs flex-col gap-3 sm:max-w-none sm:flex-row"
         >
-          <Magnetic>
-            <Button asChild variant="accent" size="lg">
+          <Magnetic className="w-full sm:w-auto">
+            <Button asChild variant="accent" size="lg" className="w-full sm:w-auto">
               <Link href={href(locale, "contact")}>{dict.hero.cta}</Link>
             </Button>
           </Magnetic>
-          <Magnetic>
+          <Magnetic className="w-full sm:w-auto">
             <Button
               asChild
               size="lg"
-              className="bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
+              className="w-full bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 sm:w-auto"
             >
               <Link href={href(locale, "rooms")}>{dict.rooms.viewAll}</Link>
             </Button>

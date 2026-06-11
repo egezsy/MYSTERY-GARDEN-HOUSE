@@ -21,7 +21,7 @@ export function Story({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "0px 0px -12% 0px" }}
           transition={{ duration: 0.8, ease: EASE }}
-          className="relative order-1 aspect-[4/3] overflow-hidden rounded-lg shadow-md lg:order-none"
+          className="relative order-1 aspect-[4/3] overflow-hidden rounded-xl shadow-md md:rounded-2xl lg:order-none"
         >
           <motion.div
             initial={{ scale: 1.12 }}
@@ -62,7 +62,11 @@ export function Story({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             </p>
           </Reveal>
           <Reveal delay={0.24}>
-            <Button asChild variant="outline" className="mt-8">
+            <Button
+              asChild
+              variant="outline"
+              className="mt-8 w-full sm:w-auto"
+            >
               <Link href={href(locale, "about")}>{dict.story.cta}</Link>
             </Button>
           </Reveal>

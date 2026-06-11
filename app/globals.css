@@ -53,6 +53,15 @@
     outline-offset: 2px;
   }
 
+  /* Anchor jumps (e.g. #story) and section headings must clear the fixed
+     navbar (~80px) so they aren't hidden underneath it. */
+  section[id],
+  h1,
+  h2,
+  h3 {
+    scroll-margin-top: 5rem;
+  }
+
   /* Prevent horizontal scroll on any device */
   html,
   body {

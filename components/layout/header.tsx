@@ -50,7 +50,7 @@ export function Header({
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-40 transition-all duration-300",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-primary/95 shadow-lg backdrop-blur-md"
           : "bg-gradient-to-b from-primary-dark/60 to-transparent",
