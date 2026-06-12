@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { MapPin, Footprints } from "lucide-react";
+import { Footprints } from "lucide-react";
 import type { Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/dictionaries";
 import { galleryImages } from "@/lib/data/gallery";
@@ -125,23 +125,13 @@ export default function AboutPage({ params }: { params: { lang: Locale } }) {
             <h2 className="accent-underline accent-underline-center font-serif text-3xl font-bold text-primary sm:text-4xl">
               {dict.about.locationHeading}
             </h2>
-            <p className="mt-6 inline-flex items-center gap-2 text-base text-charcoal/80">
-              <MapPin className="h-5 w-5 text-accent" />
+            <p className="mt-6 text-base leading-relaxed text-charcoal/80">
               {dict.about.locationDesc}
             </p>
           </div>
 
           {/* Nearby historical sites */}
           <div className="mb-12">
-            <div className="mx-auto mb-8 max-w-2xl text-center">
-              <span className="label-eyebrow">{dict.about.nearbyLabel}</span>
-              <h3 className="font-serif text-2xl font-bold text-primary sm:text-3xl">
-                {dict.about.nearbyHeading}
-              </h3>
-              <p className="mt-4 text-base leading-relaxed text-charcoal/80">
-                {dict.about.nearbyIntro}
-              </p>
-            </div>
             <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {dict.about.nearby.map((place) => (
                 <li
