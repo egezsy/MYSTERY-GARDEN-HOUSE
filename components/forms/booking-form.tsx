@@ -9,7 +9,6 @@ import type { Locale } from "@/lib/i18n-config";
 import type { Dictionary } from "@/lib/dictionaries";
 import { rooms, getRoom } from "@/lib/data/rooms";
 import { href } from "@/lib/nav";
-import { nightsBetween, formatPrice } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -91,13 +90,7 @@ export function BookingForm({
     if (r && getRoom(r)) setValue("roomId", r);
   }, [searchParams, setValue]);
 
-  const roomId = watch("roomId");
   const checkIn = watch("checkIn");
-  const checkOut = watch("checkOut");
-  const selectedRoom = getRoom(roomId);
-  const nights =
-    checkIn && checkOut ? nightsBetween(checkIn, checkOut) : 0;
-  const total = selectedRoom ? selectedRoom.price * nights : 0;
 
   async function onSubmit(values: Values) {
     const res = await fetch("/api/bookings", {
@@ -209,8 +202,7 @@ export function BookingForm({
                 <SelectContent>
                   {rooms.map((r) => (
                     <SelectItem key={r.id} value={r.id}>
-                      {r.name} — {formatPrice(r.price, locale)}{" "}
-                      {dict.common.currency}
+                      {r.name[locale]}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -252,19 +244,6 @@ export function BookingForm({
           {...register("specialRequests")}
         />
       </div>
-
-      {selectedRoom && nights > 0 && (
-        <div className="flex items-center justify-between rounded-md border border-accent/30 bg-accent/10 px-4 py-3">
-          <span className="text-base text-charcoal">
-            {nights} {t.nights} × {formatPrice(selectedRoom.price, locale)}{" "}
-            {dict.common.currency}
-          </span>
-          <span className="font-serif text-xl font-semibold text-accent">
-            {t.estimatedTotal}: {formatPrice(total, locale)}{" "}
-            {dict.common.currency}
-          </span>
-        </div>
-      )}
 
       <Button
         type="submit"

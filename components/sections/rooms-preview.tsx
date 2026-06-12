@@ -3,7 +3,7 @@
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n-config";
 import type { Dictionary } from "@/lib/dictionaries";
-import { rooms } from "@/lib/data/rooms";
+import { featuredRooms } from "@/lib/data/rooms";
 import { href } from "@/lib/nav";
 import { Button } from "@/components/ui/button";
 import { RoomCard } from "@/components/rooms/room-card";
@@ -36,7 +36,7 @@ export function RoomsPreview({
         </div>
 
         <Stagger className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-          {rooms.map((room) => (
+          {featuredRooms.map((room) => (
             <StaggerItem key={room.id} className="h-full">
               <RoomCard room={room} locale={locale} dict={dict} />
             </StaggerItem>

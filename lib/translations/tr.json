@@ -36,15 +36,27 @@
     "book": "Rezervasyon Yap",
     "viewAll": "Tüm Odaları Gör",
     "amenitiesLabel": "Oda Özellikleri",
+    "sizeLabel": "Oda Büyüklüğü",
+    "bedsLabel": "Yatak Düzeni",
     "filters": {
       "all": "Tümü",
-      "twoGuests": "2 Kişilik",
-      "family": "Aile / 4 Kişi",
-      "priceLow": "Fiyat: Düşük → Yüksek",
-      "priceHigh": "Fiyat: Yüksek → Düşük"
+      "one": "1 Kişilik",
+      "two": "2 Kişilik",
+      "three": "3 Kişilik",
+      "four": "4 Kişilik"
     },
-    "capacityLabel": "Kapasite",
-    "priceLabel": "Fiyat"
+    "features": {
+      "wifi": "Ücretsiz WiFi",
+      "ac": "Klima",
+      "privateBathroom": "Özel Banyo",
+      "tv": "Düz Ekran TV",
+      "kettle": "Elektrikli Su Isıtıcısı",
+      "outdoorDining": "Açık Havada Yemek Alanı",
+      "gardenView": "Bahçe Manzarası",
+      "courtyardView": "İç Avlu Manzarası",
+      "terrace": "Veranda / Avlu"
+    },
+    "capacityLabel": "Kapasite"
   },
   "amenities": {
     "label": "Sunduklarımız",

@@ -7,7 +7,14 @@ import { rooms } from "@/lib/data/rooms";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { RoomCard } from "./room-card";
 
-type Filter = "all" | "twoGuests" | "family" | "priceLow" | "priceHigh";
+type Filter = "all" | "one" | "two" | "three" | "four";
+
+const filterCapacity: Record<Exclude<Filter, "all">, number> = {
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+};
 
 export function RoomsGrid({
   locale,
@@ -19,12 +26,8 @@ export function RoomsGrid({
   const [filter, setFilter] = useState<Filter>("all");
 
   const visible = useMemo(() => {
-    let list = [...rooms];
-    if (filter === "twoGuests") list = list.filter((r) => r.capacity === 2);
-    if (filter === "family") list = list.filter((r) => r.capacity >= 4);
-    if (filter === "priceLow") list.sort((a, b) => a.price - b.price);
-    if (filter === "priceHigh") list.sort((a, b) => b.price - a.price);
-    return list;
+    if (filter === "all") return rooms;
+    return rooms.filter((r) => r.capacity === filterCapacity[filter]);
   }, [filter]);
 
   return (
@@ -36,16 +39,10 @@ export function RoomsGrid({
       >
         <TabsList className="overflow-x-auto no-scrollbar">
           <TabsTrigger value="all">{dict.rooms.filters.all}</TabsTrigger>
-          <TabsTrigger value="twoGuests">
-            {dict.rooms.filters.twoGuests}
-          </TabsTrigger>
-          <TabsTrigger value="family">{dict.rooms.filters.family}</TabsTrigger>
-          <TabsTrigger value="priceLow">
-            {dict.rooms.filters.priceLow}
-          </TabsTrigger>
-          <TabsTrigger value="priceHigh">
-            {dict.rooms.filters.priceHigh}
-          </TabsTrigger>
+          <TabsTrigger value="one">{dict.rooms.filters.one}</TabsTrigger>
+          <TabsTrigger value="two">{dict.rooms.filters.two}</TabsTrigger>
+          <TabsTrigger value="three">{dict.rooms.filters.three}</TabsTrigger>
+          <TabsTrigger value="four">{dict.rooms.filters.four}</TabsTrigger>
         </TabsList>
       </Tabs>
 

@@ -36,15 +36,27 @@
     "book": "Book Now",
     "viewAll": "View All Rooms",
     "amenitiesLabel": "Room Features",
+    "sizeLabel": "Room Size",
+    "bedsLabel": "Bed Configuration",
     "filters": {
       "all": "All",
-      "twoGuests": "2 Guests",
-      "family": "Family / 4 Guests",
-      "priceLow": "Price: Low → High",
-      "priceHigh": "Price: High → Low"
+      "one": "1 Person",
+      "two": "2 People",
+      "three": "3 People",
+      "four": "4 People"
     },
-    "capacityLabel": "Capacity",
-    "priceLabel": "Price"
+    "features": {
+      "wifi": "Free WiFi",
+      "ac": "Air Conditioning",
+      "privateBathroom": "Private Bathroom",
+      "tv": "Flat-screen TV",
+      "kettle": "Electric Kettle",
+      "outdoorDining": "Outdoor Dining Area",
+      "gardenView": "Garden View",
+      "courtyardView": "Inner Courtyard View",
+      "terrace": "Terrace / Patio"
+    },
+    "capacityLabel": "Capacity"
   },
   "amenities": {
     "label": "What We Offer",

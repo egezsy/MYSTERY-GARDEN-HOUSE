@@ -34,6 +34,10 @@ export function mainNav(locale: Locale, dict: Dictionary) {
   ];
 }
 
+/** External Booking.com reservation URL — all "Book Now" CTAs point here. */
+export const BOOKING_URL =
+  "https://www.booking.com/hotel/xy/secret-garden-walled-city.tr.html?aid=318615&label=New_English_EN_CY_26744711065-zsrlVBleZFFt4cweMJc66wSM640819001028%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-64415224945%3Alp21269%3Ali%3Adem%3Adm%3Aag26744711065%3Acmp394170025&sid=c4865bc522d7e9707e277af6c5201044&dest_id=-2738254&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1781252394&srpvid=bb273a9295a40f9a&type=total&ucfs=1&";
+
 /** Shared contact constants used across CTA, footer and contact page. */
 export const CONTACT = {
   phone: "+90 232 000 00 00",

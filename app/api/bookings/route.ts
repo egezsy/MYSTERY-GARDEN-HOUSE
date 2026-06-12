@@ -41,7 +41,7 @@ export async function POST(request: Request) {
       email: data.email,
       phone: data.phone,
       roomId: data.roomId,
-      roomName: room.name,
+      roomName: room.name.tr,
       checkIn: new Date(data.checkIn).toISOString(),
       checkOut: new Date(data.checkOut).toISOString(),
       guests: data.guests,
