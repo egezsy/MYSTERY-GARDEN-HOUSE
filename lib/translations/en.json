@@ -68,8 +68,44 @@
       "garden": { "title": "Quiet Garden", "desc": "A serene retreat with friendly pets and cosy seating corners" },
       "parking": { "title": "Free Parking", "desc": "Free private parking right on the street beside you" },
       "house": { "title": "Authentic Cyprus House", "desc": "True to traditional architecture, bathrooms and toilets are just outside the rooms, a few steps away" },
-      "pet": { "title": "Friendly Companions", "desc": "Our garden's lovable friends await you with a warm welcome" }
+      "nonsmoking": { "title": "Non-smoking Rooms", "desc": "A completely smoke-free, spotless and serene place to stay" }
     }
+  },
+  "facilities": {
+    "label": "Facilities",
+    "heading": "Every Detail of Your Stay, Considered",
+    "subheading": "Details that blend the warmth of a traditional Cyprus home with modern comfort.",
+    "note": "True to traditional Cyprus architecture, the bathrooms and toilets are private to your room — set just a few steps outside it.",
+    "pillars": [
+      {
+        "title": "Most Popular",
+        "groups": [
+          { "subtitle": "", "items": ["Free Wi-Fi", "Free parking", "Non-smoking rooms", "A great breakfast"] }
+        ]
+      },
+      {
+        "title": "Room & Bathroom",
+        "groups": [
+          { "subtitle": "Room", "items": ["Private bathroom", "Air conditioning", "Flat-screen TV", "Satellite / cable channels", "Wardrobe and linens", "Socket near the bed", "Clothes rack", "Heating", "Tiled / marble floor"] },
+          { "subtitle": "Bathroom", "items": ["Shower", "Toilet", "Towels", "Slippers", "Toilet paper", "Free toiletries", "Hairdryer"] }
+        ]
+      },
+      {
+        "title": "Outdoors & Kitchen",
+        "groups": [
+          { "subtitle": "Outdoors", "items": ["Outdoor furniture", "Outdoor dining area", "A peaceful garden", "Shared lounge / TV area"] },
+          { "subtitle": "Kitchen", "items": ["Electric kettle", "Breakfast served in the room"] }
+        ]
+      },
+      {
+        "title": "Services & Security",
+        "groups": [
+          { "subtitle": "Services", "items": ["Bicycle rental (surcharge)", "Daily housekeeping", "Luggage storage"] },
+          { "subtitle": "Security", "items": ["Fire extinguishers", "CCTV (outside & common areas)", "Smoke alarms", "Key access"] },
+          { "subtitle": "General", "items": ["Entire unit on the ground floor", "Languages spoken: Turkish, English, Greek"] }
+        ]
+      }
+    ]
   },
   "stats": {
     "label": "By the Numbers",
@@ -81,10 +117,24 @@
   "testimonials": {
     "label": "Guest Reviews",
     "heading": "Notes from the Garden",
+    "score": 9.1,
+    "scoreMax": 10,
+    "scoreLabel": "Superb",
+    "reviewCount": "192 reviews",
+    "categoriesHeading": "Rating Breakdown",
+    "categories": [
+      { "label": "Staff", "value": 9.8 },
+      { "label": "Location", "value": 9.7 },
+      { "label": "Value for Money", "value": 9.2 },
+      { "label": "Cleanliness", "value": 9.0 },
+      { "label": "Comfort", "value": 9.0 },
+      { "label": "Facilities", "value": 8.9 },
+      { "label": "Free WiFi", "value": 8.5 }
+    ],
     "items": [
-      { "name": "Elif & Can", "location": "Istanbul", "text": "The most peaceful place we have ever stayed. The breakfast in the garden was something else. We will definitely come back." },
-      { "name": "Sarah M.", "location": "London", "text": "A true hidden paradise. The scent of lavender, the warm welcome and the perfect details... Words fall short." },
-      { "name": "Mehmet Y.", "location": "Ankara", "text": "Waking up in a garden steeped in history, right beside the ancient walls, was unforgettable. Everything is a five-minute walk away — and the hosts' warmth is something else entirely." }
+      { "name": "Elif K.", "location": "Istanbul", "focus": "Hospitality", "text": "Birsen and Mustafa welcome you with such genuine warmth that you feel less like a guest and more like an old friend. Their care and kindness made our stay truly unforgettable." },
+      { "name": "Sarah M.", "location": "London", "focus": "Breakfast & Garden", "text": "Each morning, the rich Cypriot breakfast our hosts laid out by hand in the peaceful garden was a feast. Starting the day with fresh local flavours and birdsong is something else entirely." },
+      { "name": "Mehmet Y.", "location": "Ankara", "focus": "Location & Room", "text": "Despite being right in the historical core, the rooms are surprisingly quiet and serene. Waking up in a comfortable room, a short walk from every monument, was a real privilege." }
     ]
   },
   "ctaSection": {

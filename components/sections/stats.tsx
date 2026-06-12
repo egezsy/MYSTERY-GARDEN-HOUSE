@@ -6,9 +6,9 @@ import { Counter, Stagger, StaggerItem } from "@/components/motion";
 export function Stats({ dict }: { dict: Dictionary }) {
   const items = [
     { to: 10, suffix: "+", label: dict.stats.years, decimals: 0 },
-    { to: 3, suffix: "", label: dict.stats.rooms, decimals: 0 },
+    { to: 6, suffix: "", label: dict.stats.rooms, decimals: 0 },
     { to: 500, suffix: "+", label: dict.stats.guests, decimals: 0 },
-    { to: 4.9, suffix: "", label: dict.stats.rating, decimals: 1 },
+    { to: 9.1, suffix: "", label: dict.stats.rating, decimals: 1 },
   ];
 
   return (

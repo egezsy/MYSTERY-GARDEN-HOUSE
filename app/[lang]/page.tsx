@@ -17,7 +17,7 @@ export default function HomePage({ params }: { params: { lang: Locale } }) {
       <RoomsPreview locale={params.lang} dict={dict} />
       <Amenities dict={dict} />
       <Stats dict={dict} />
-      <Testimonials dict={dict} />
+      <Testimonials locale={params.lang} dict={dict} />
       <CtaSection locale={params.lang} dict={dict} />
     </>
   );

@@ -3,6 +3,7 @@ import type { Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/dictionaries";
 import { PageHeader } from "@/components/layout/page-header";
 import { RoomsGrid } from "@/components/rooms/rooms-grid";
+import { Facilities } from "@/components/sections/facilities";
 
 export async function generateMetadata({
   params,
@@ -27,6 +28,7 @@ export default function RoomsPage({ params }: { params: { lang: Locale } }) {
           <RoomsGrid locale={params.lang} dict={dict} />
         </div>
       </section>
+      <Facilities dict={dict} />
     </>
   );
 }

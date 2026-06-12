@@ -68,8 +68,44 @@
       "garden": { "title": "Sakin Bahçe", "desc": "Güler yüzlü dostlarımız ve keyifli oturma köşeleriyle dingin bir sığınak" },
       "parking": { "title": "Ücretsiz Otopark", "desc": "Hemen yanı başınızda, sokakta ücretsiz özel park imkânı" },
       "house": { "title": "Otantik Kıbrıs Evi", "desc": "Geleneksel mimariye sadık evimizde banyo ve tuvaletler, odaların hemen dışında birkaç adım ötededir" },
-      "pet": { "title": "Güler Yüzlü Dostlar", "desc": "Bahçemizin sevimli dostları sizi sıcacık bir karşılamayla bekliyor" }
+      "nonsmoking": { "title": "Sigara İçilmeyen Odalar", "desc": "Tamamen sigarasız, tertemiz ve huzurlu bir konaklama ortamı" }
     }
+  },
+  "facilities": {
+    "label": "Olanaklar",
+    "heading": "Konaklamanızın Her Detayı Düşünüldü",
+    "subheading": "Geleneksel bir Kıbrıs evinin sıcaklığını modern konforla buluşturan ayrıntılar.",
+    "note": "Geleneksel Kıbrıs mimarisine özgü olarak banyo ve tuvaletler odaya özeldir; yalnızca odanın birkaç adım dışında konumlanır.",
+    "pillars": [
+      {
+        "title": "En Popüler",
+        "groups": [
+          { "subtitle": "", "items": ["Ücretsiz Wi-Fi", "Ücretsiz otopark", "Sigara içilmeyen odalar", "İyi bir kahvaltı"] }
+        ]
+      },
+      {
+        "title": "Oda & Banyo",
+        "groups": [
+          { "subtitle": "Oda", "items": ["Özel banyo", "Klima", "Düz ekran TV", "Uydu / kablolu yayın kanalları", "Gardırop ve nevresim", "Yatağa yakın priz", "Kıyafet askılığı", "Isıtma", "Karo / mermer zemin"] },
+          { "subtitle": "Banyo", "items": ["Duş", "Tuvalet", "Havlular", "Terlik", "Tuvalet kağıdı", "Ücretsiz banyo malzemeleri", "Saç kurutma makinesi"] }
+        ]
+      },
+      {
+        "title": "Açık Hava & Mutfak",
+        "groups": [
+          { "subtitle": "Açık Hava", "items": ["Açık hava mobilyaları", "Açık havada yemek alanı", "Huzurlu bir bahçe", "Ortak salon / TV alanı"] },
+          { "subtitle": "Mutfak", "items": ["Elektrikli su ısıtıcısı", "Odaya kahvaltı servisi"] }
+        ]
+      },
+      {
+        "title": "Hizmetler & Güvenlik",
+        "groups": [
+          { "subtitle": "Hizmetler", "items": ["Bisiklet kiralama (ilave ücret)", "Günlük kat hizmeti", "Bagaj muhafazası"] },
+          { "subtitle": "Güvenlik", "items": ["Yangın söndürücüler", "Güvenlik kameraları (dış & ortak alanlar)", "Duman alarmları", "Anahtarlı erişim"] },
+          { "subtitle": "Genel", "items": ["Tüm birim zemin katta", "Konuşulan diller: Türkçe, İngilizce, Yunanca"] }
+        ]
+      }
+    ]
   },
   "stats": {
     "label": "Rakamlarla Biz",
@@ -81,10 +117,24 @@
   "testimonials": {
     "label": "Misafir Yorumları",
     "heading": "Bahçeden Notlar",
+    "score": 9.1,
+    "scoreMax": 10,
+    "scoreLabel": "Fevkalade",
+    "reviewCount": "192 değerlendirme",
+    "categoriesHeading": "Puan Kırılımı",
+    "categories": [
+      { "label": "Çalışanlar", "value": 9.8 },
+      { "label": "Konum", "value": 9.7 },
+      { "label": "Fiyat / Fayda", "value": 9.2 },
+      { "label": "Temizlik", "value": 9.0 },
+      { "label": "Rahatlık", "value": 9.0 },
+      { "label": "Olanaklar", "value": 8.9 },
+      { "label": "Ücretsiz WiFi", "value": 8.5 }
+    ],
     "items": [
-      { "name": "Elif & Can", "location": "İstanbul", "text": "Hayatımızda kaldığımız en huzurlu yer. Sabah bahçede yapılan kahvaltı bir başkaydı. Mutlaka tekrar geleceğiz." },
-      { "name": "Sarah M.", "location": "Londra", "text": "Gerçek bir saklı cennet. Lavanta kokusu, sıcak karşılama ve mükemmel detaylar... Kelimeler yetersiz." },
-      { "name": "Mehmet Y.", "location": "Ankara", "text": "Surların hemen yanında, tarihin içinde bir bahçede uyanmak unutulmazdı. Her şey beş dakika yürüme mesafesinde; ev sahiplerinin sıcaklığı ise apayrı." }
+      { "name": "Elif K.", "location": "İstanbul", "focus": "Çalışanlar", "text": "Birsen Hanım ve Mustafa Bey'in içten güler yüzü, kendinizi bir misafirden çok eski bir dost gibi hissettiriyor. Gösterdikleri ilgi ve sıcaklık bu konaklamayı unutulmaz kıldı." },
+      { "name": "Sarah M.", "location": "Londra", "focus": "Kahvaltı & Bahçe", "text": "Her sabah huzurlu bahçede, ev sahiplerimizin elleriyle hazırladığı zengin Kıbrıs kahvaltısı bir şölen gibiydi. Kuş sesleri eşliğinde taze lezzetlerle başlayan günlerin tadı bambaşka." },
+      { "name": "Mehmet Y.", "location": "Ankara", "focus": "Konum & Oda", "text": "Tarihin tam kalbinde olmasına rağmen odalar şaşırtıcı derecede sessiz ve huzurlu. Tüm anıtlara yürüme mesafesinde, konforlu bir odada uyanmak büyük bir ayrıcalıktı." }
     ]
   },
   "ctaSection": {
