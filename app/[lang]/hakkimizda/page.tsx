@@ -6,6 +6,7 @@ import { getDictionary } from "@/lib/dictionaries";
 import { galleryImages } from "@/lib/data/gallery";
 import { BLUR } from "@/lib/blur";
 import { PageHeader } from "@/components/layout/page-header";
+import { LocationMap } from "@/components/map/location-map";
 import { Reveal } from "@/components/motion";
 
 export async function generateMetadata({
@@ -160,11 +161,9 @@ export default function AboutPage({ params }: { params: { lang: Locale } }) {
           </div>
 
           <div className="overflow-hidden rounded-xl border border-border shadow-md md:rounded-2xl">
-            <iframe
-              title={dict.contact.mapLabel}
-              src="https://www.openstreetmap.org/export/embed.html?bbox=33.930%2C35.118%2C33.952%2C35.134&layer=mapnik&marker=35.1257%2C33.9410"
+            <LocationMap
+              label="Mystery Garden House"
               className="h-[320px] w-full md:h-[420px]"
-              loading="lazy"
             />
           </div>
         </div>

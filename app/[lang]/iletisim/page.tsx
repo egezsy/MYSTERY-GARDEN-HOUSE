@@ -14,6 +14,7 @@ import { getDictionary } from "@/lib/dictionaries";
 import { CONTACT } from "@/lib/nav";
 import { galleryImages } from "@/lib/data/gallery";
 import { PageHeader } from "@/components/layout/page-header";
+import { LocationMap } from "@/components/map/location-map";
 import { ContactForm } from "@/components/forms/contact-form";
 import { BookingForm } from "@/components/forms/booking-form";
 import { Reveal } from "@/components/motion";
@@ -125,12 +126,7 @@ export default function ContactPage({ params }: { params: { lang: Locale } }) {
 
             {/* Map */}
             <div className="overflow-hidden rounded-xl border border-border shadow-sm md:rounded-2xl">
-              <iframe
-                title={dict.contact.mapLabel}
-                src="https://www.openstreetmap.org/export/embed.html?bbox=33.930%2C35.118%2C33.952%2C35.134&layer=mapnik&marker=35.1257%2C33.9410"
-                className="h-64 w-full"
-                loading="lazy"
-              />
+              <LocationMap label="Mystery Garden House" className="h-64 w-full" />
             </div>
 
             {/* Instagram placeholder */}
