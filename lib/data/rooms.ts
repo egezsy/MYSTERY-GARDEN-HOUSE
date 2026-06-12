@@ -98,12 +98,12 @@ export const rooms: Room[] = [
     size: 20,
     beds: { tr: "1 büyük çift kişilik yatak", en: "1 large double bed" },
     description: {
-      tr: "Lüks detaylarla donatılmış, romantik kaçamak için ideal deluxe oda.",
-      en: "Luxury details, ideal for romantic getaways.",
+      tr: "Lüks detaylarla donatılmış, yüksek konfor için ideal deluxe oda.",
+      en: "Luxury details, ideal for a high-comfort stay.",
     },
     longDescription: {
-      tr: "Lüks detaylarla donatılan deluxe çift kişilik odamız romantik bir kaçamak için tasarlandı. Büyük çift kişilik yatağı, bahçe ve iç avlu manzarası, verandası ve özel banyosuyla unutulmaz bir konaklama vaat eder.",
-      en: "Appointed with luxurious details, our deluxe double room is designed for a romantic getaway. With a large double bed, garden and courtyard views, a terrace and a private bathroom, it promises a memorable stay.",
+      tr: "Lüks detaylarla donatılan deluxe çift kişilik odamız yüksek konfor için tasarlandı. Büyük çift kişilik yatağı, bahçe ve iç avlu manzarası, verandası ve özel banyosuyla unutulmaz bir konaklama vaat eder.",
+      en: "Appointed with luxurious details, our deluxe double room is designed for a high-comfort stay. With a large double bed, garden and courtyard views, a terrace and a private bathroom, it promises a memorable stay.",
     },
     image: img("1611892440504-42a792e24d32"),
     gallery: [
