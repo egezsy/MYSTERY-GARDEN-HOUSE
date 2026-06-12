@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Star } from "lucide-react";
 import {
   motion,
   useScroll,
@@ -21,6 +21,10 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
+  const score =
+    locale === "tr"
+      ? dict.testimonials.score.toFixed(1).replace(".", ",")
+      : dict.testimonials.score.toFixed(1);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -61,7 +65,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           transition={{ duration: 0.8, ease: EASE }}
           className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-accent-light"
         >
-          Şirince · İzmir
+          Suriçi · Gazimağusa
         </motion.span>
 
         <h1 className="font-serif text-2xl font-bold leading-tight drop-shadow-md xs:text-3xl sm:text-5xl lg:text-6xl">
@@ -80,8 +84,23 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.95 }}
-          className="mt-9 flex w-full max-w-xs flex-col gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:justify-center"
+          transition={{ duration: 0.8, ease: EASE, delay: 0.85 }}
+          className="mt-7"
+        >
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm backdrop-blur-sm">
+            <Star className="h-4 w-4 fill-accent-light text-accent-light" />
+            <span className="font-semibold">{score}</span>
+            <span className="text-white/85">{dict.testimonials.scoreLabel}</span>
+            <span className="h-1 w-1 rounded-full bg-white/40" />
+            <span className="text-white/70">{dict.testimonials.reviewCount}</span>
+          </span>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: EASE, delay: 1.0 }}
+          className="mt-8 flex w-full max-w-xs flex-col gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:justify-center"
         >
           <Magnetic className="w-full sm:w-auto">
             <Button asChild variant="accent" size="lg" className="w-full sm:w-auto">

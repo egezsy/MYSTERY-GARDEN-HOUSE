@@ -1,6 +1,7 @@
 import type { Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/dictionaries";
 import { Hero } from "@/components/sections/hero";
+import { MostPopular } from "@/components/sections/most-popular";
 import { Story } from "@/components/sections/story";
 import { RoomsPreview } from "@/components/sections/rooms-preview";
 import { Amenities } from "@/components/sections/amenities";
@@ -13,6 +14,7 @@ export default function HomePage({ params }: { params: { lang: Locale } }) {
   return (
     <>
       <Hero locale={params.lang} dict={dict} />
+      <MostPopular dict={dict} />
       <Story locale={params.lang} dict={dict} />
       <RoomsPreview locale={params.lang} dict={dict} />
       <Amenities dict={dict} />
