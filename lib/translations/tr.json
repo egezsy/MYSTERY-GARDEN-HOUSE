@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Mystery Garden House — Butik Bahçe Konukevi",
-    "description": "Sisli bir lavanta bahçesinin kalbinde, gizemli ve davetkâr bir kaçamak. Bahçenin sırrını keşfedin."
+    "description": "Gazimağusa Suriçi'nin kalbinde, asırlık surların ve 365 tarihi eserin gölgesinde saklı bir bahçe konukevi. Tarihin ortasında, doğayla iç içe huzurlu bir kaçamak."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -21,9 +21,9 @@
   },
   "story": {
     "label": "Hikayemiz",
-    "heading": "Sisin İçinde Saklı Bir Bahçe",
-    "p1": "Mystery Garden House, alacakaranlıkta lavanta kokan bir bahçenin ortasında, zamanın yavaşladığı bir kaçamaktır. Her köşesi özenle tasarlanmış, doğanın huzuruyla zarif konforu bir araya getiren bir konukevi.",
-    "p2": "Sabahları kuş sesleriyle uyanın, gün boyu bahçenin patikalarında kaybolun, akşamları yıldızların altında sıcak bir çay yudumlayın. Burada her misafir, bahçenin kendi sırrını keşfeder.",
+    "heading": "Surların İçinde Saklı Bir Bahçe",
+    "p1": "Mystery Garden House, üç kilometrelik Venedik surlarıyla çevrili Gazimağusa Suriçi'nin tam kalbinde, asırlık taşların arasına gizlenmiş yemyeşil bir sığınaktır. Kapımızı araladığınızda, antik şehrin uğultusu yerini kuş cıvıltılarına, yaprak hışırtısına ve bahçemizin dingin sessizliğine bırakır.",
+    "p2": "Lusignan, Venedik, Ceneviz ve Osmanlı'nın izlerini taşıyan 365 tarihi anıtın ortasında; yaşayan tarihle doğanın huzurunu aynı avluda buluşturuyoruz. Birsen ve Mustafa Tamer olarak, yıllarca özenle büyüttüğümüz bu bahçeyi ve geleneksel Kıbrıs evimizi, sırrını sizinle paylaşmak için açtık.",
     "cta": "Hikayemizi Okuyun"
   },
   "rooms": {
@@ -38,6 +38,7 @@
     "amenitiesLabel": "Oda Özellikleri",
     "sizeLabel": "Oda Büyüklüğü",
     "bedsLabel": "Yatak Düzeni",
+    "bathroomNote": "Otantik bir Kıbrıs evinde konaklıyorsunuz: Geleneksel mimarimize sadık kalarak banyo ve tuvaletler odaların hemen dışında, birkaç adım mesafededir. Bu küçük ayrıntı, asırlık bir evde kalmanın sahici bir parçasıdır.",
     "filters": {
       "all": "Tümü",
       "one": "1 Kişilik",
@@ -48,7 +49,7 @@
     "features": {
       "wifi": "Ücretsiz WiFi",
       "ac": "Klima",
-      "privateBathroom": "Özel Banyo",
+      "privateBathroom": "Banyo & WC (Oda Dışında)",
       "tv": "Düz Ekran TV",
       "kettle": "Elektrikli Su Isıtıcısı",
       "outdoorDining": "Açık Havada Yemek Alanı",
@@ -62,12 +63,12 @@
     "label": "Sunduklarımız",
     "heading": "Konforunuz İçin Her Şey",
     "items": {
-      "wifi": { "title": "Ücretsiz WiFi", "desc": "Tüm alanlarda yüksek hızlı internet" },
-      "breakfast": { "title": "Bahçe Kahvaltısı", "desc": "Taze, organik ve yerel lezzetler" },
-      "garden": { "title": "Özel Bahçe", "desc": "Lavanta patikaları ve dinlenme köşeleri" },
-      "parking": { "title": "Ücretsiz Otopark", "desc": "Güvenli ve geniş park alanı" },
-      "jacuzzi": { "title": "Jakuzi", "desc": "Seçili odalarda özel jakuzi" },
-      "pet": { "title": "Evcil Hayvan Dostu", "desc": "Dört ayaklı dostlarınız da hoş geldiniz" }
+      "wifi": { "title": "Üstün Hızlı WiFi", "desc": "Tüm tesiste, konuklarımızın övgüyle bahsettiği yüksek hızlı internet" },
+      "breakfast": { "title": "Bahçe Kahvaltısı", "desc": "Huzurlu bahçemizde servis edilen kontinental kahvaltının tadını çıkarın" },
+      "garden": { "title": "Sakin Bahçe", "desc": "Güler yüzlü dostlarımız ve keyifli oturma köşeleriyle dingin bir sığınak" },
+      "parking": { "title": "Ücretsiz Otopark", "desc": "Hemen yanı başınızda, sokakta ücretsiz özel park imkânı" },
+      "house": { "title": "Otantik Kıbrıs Evi", "desc": "Geleneksel mimariye sadık evimizde banyo ve tuvaletler, odaların hemen dışında birkaç adım ötededir" },
+      "pet": { "title": "Güler Yüzlü Dostlar", "desc": "Bahçemizin sevimli dostları sizi sıcacık bir karşılamayla bekliyor" }
     }
   },
   "stats": {
@@ -83,7 +84,7 @@
     "items": [
       { "name": "Elif & Can", "location": "İstanbul", "text": "Hayatımızda kaldığımız en huzurlu yer. Sabah bahçede yapılan kahvaltı bir başkaydı. Mutlaka tekrar geleceğiz." },
       { "name": "Sarah M.", "location": "Londra", "text": "Gerçek bir saklı cennet. Lavanta kokusu, sıcak karşılama ve mükemmel detaylar... Kelimeler yetersiz." },
-      { "name": "Mehmet Y.", "location": "Ankara", "text": "Treehouse Cabin'de geçirdiğimiz gece unutulmazdı. Ağaçların arasında uyanmak inanılmaz bir deneyim." }
+      { "name": "Mehmet Y.", "location": "Ankara", "text": "Surların hemen yanında, tarihin içinde bir bahçede uyanmak unutulmazdı. Her şey beş dakika yürüme mesafesinde; ev sahiplerinin sıcaklığı ise apayrı." }
     ]
   },
   "ctaSection": {
@@ -94,7 +95,7 @@
     "whatsapp": "WhatsApp"
   },
   "footer": {
-    "tagline": "Sisli bir lavanta bahçesinde, gizemli ve davetkâr bir kaçamak.",
+    "tagline": "Gazimağusa Suriçi'nde, asırlık surların gölgesinde saklı yemyeşil bir kaçamak.",
     "explore": "Keşfet",
     "contact": "İletişim",
     "newsletter": "Bültenimize Katılın",
@@ -103,23 +104,36 @@
     "subscribe": "Abone Ol",
     "subscribed": "Teşekkürler! Aboneliğiniz alındı.",
     "rights": "Tüm hakları saklıdır.",
-    "address": "Bahçe Mahallesi, Lavanta Sokak No:7, Şirince, İzmir"
+    "address": "Suriçi (Walled City), Gazimağusa, Kuzey Kıbrıs"
   },
   "about": {
     "title": "Hakkımızda",
-    "subtitle": "Bir bahçenin, bir evin ve sayısız anının hikayesi.",
+    "subtitle": "Bir bahçenin, asırlık surların ve sıcak bir evin hikâyesi.",
     "philosophyLabel": "Felsefemiz",
-    "philosophyHeading": "Doğayla Uyum İçinde Yaşamak",
-    "philosophyP1": "Mystery Garden House, doğaya saygılı, sürdürülebilir ve sade bir yaşam anlayışıyla kuruldu. Bahçemizdeki her bitki elimizle ekildi, her taş özenle yerleştirildi.",
-    "philosophyP2": "Amacımız, misafirlerimize sadece bir konaklama değil; doğayla yeniden bağ kurabilecekleri, dinlenebilecekleri ve kendilerini yeniden keşfedebilecekleri bir alan sunmak.",
-    "hostLabel": "Ev Sahibiniz",
-    "hostName": "Ayşe Deniz",
-    "hostRole": "Kurucu & Ev Sahibi",
-    "hostBio": "On yıldır bu bahçenin bekçiliğini yapıyorum. Şehir hayatını geride bırakıp doğaya döndüğümde, bu evi bir sığınak olarak hayal etmiştim. Bugün, bu sırrı sizlerle paylaşmaktan mutluluk duyuyorum.",
+    "philosophyHeading": "Tarihin Ortasında, Doğayla İç İçe",
+    "philosophyP1": "Mystery Garden House, çok eski ve otantik yapılardan oluşan geleneksel bir Kıbrıs evidir. Her taşı yüzyılların hikâyesini fısıldayan bu evi, olduğu gibi, sahiciliğiyle koruyoruz. Burada lüks; gösterişte değil, yaşayan tarihin sıcaklığında, sade güzellikte ve içten misafirperverlikte saklıdır.",
+    "philosophyP2": "Biz, hayata ve insanlara dair en küçük güzelliklerde mutluluğu bulan, doğaya gönülden bağlı bir çiftiz. Her yaştan, her yoldan insanla kolayca bağ kurabildiğimiz için kapımızı misafirlerimize açtık. Amacımız size yalnızca bir konaklama değil; resimle, seramikle, müzikle ve bahçenin kokusuyla bezenmiş gerçek bir ev sıcaklığı sunmaktır.",
+    "hostLabel": "Ev Sahipleriniz",
+    "hostName": "Birsen & Mustafa Tamer",
+    "hostRole": "Ev Sahipleriniz & Bahçenin Bekçileri",
+    "hostBio": "Birsen ve Mustafa olarak günlerimiz bahçeyle başlar; toprakla uğraşmak ve denize, balığa dair sabırlı bir sevgi en büyük tutkumuzdur. Sıcakkanlı, empati dolu ve doğaya âşık iki insanız. Sanatla da iç içe yaşıyoruz: korolarda akordeon çalıyor; resim, seramik ve vitray sanatıyla eserler üretiyoruz — bugüne dek 3 kişisel ve birçok karma sergide yer aldık. Sizi Türkçe, İngilizce ve Rumca ağırlamaktan, soframızı ve hikâyelerimizi paylaşmaktan içten bir mutluluk duyarız.",
     "galleryLabel": "Bahçeden Kareler",
     "locationLabel": "Konum",
-    "locationHeading": "Bizi Bulun",
-    "locationDesc": "Şirince'nin sakin tepelerinde, doğayla iç içe bir konumda."
+    "locationHeading": "Tarihin Tam Ortasında",
+    "locationDesc": "Gazimağusa Suriçi'nin kalbinde, üç kilometrelik Venedik surlarıyla çevrili; 365 tarihi anıtın komşuluğunda.",
+    "nearbyLabel": "Çevremiz",
+    "nearbyHeading": "Kapımızın Önünde Asırlık Bir Miras",
+    "nearbyIntro": "Venedik, Lusignan, Ceneviz ve Osmanlı eserleriyle iç içe bu eşsiz coğrafyada, tarihin en görkemli durakları yürüme mesafenizde. Keşfetmek isteyenler için bisiklet kiralama imkânımız da var.",
+    "nearby": [
+      { "name": "St. Nicholas Katedrali (Lala Mustafa Paşa Camii)", "distance": "5 dk yürüme" },
+      { "name": "Namık Kemal Meydanı ve Zindanı", "distance": "5 dk yürüme" },
+      { "name": "Othello Kalesi", "distance": "5 dk yürüme" },
+      { "name": "Venedik Sarayı", "distance": "5 dk yürüme" },
+      { "name": "Palm Beach", "distance": "15 dk yürüme" },
+      { "name": "Derinya Halk Plajı", "distance": "2,2 km" },
+      { "name": "Ayia Napa Manastırı", "distance": "19 km" },
+      { "name": "Ercan & Larnaka Havalimanları", "distance": "45 dk" }
+    ]
   },
   "gallery": {
     "title": "Galeri",
@@ -140,7 +154,7 @@
     "subtitle": "Sorularınız ve rezervasyonlarınız için bize ulaşın.",
     "infoHeading": "İletişim Bilgileri",
     "address": "Adres",
-    "addressValue": "Bahçe Mahallesi, Lavanta Sokak No:7, Şirince, İzmir",
+    "addressValue": "Suriçi (Walled City), Gazimağusa, Kuzey Kıbrıs",
     "phone": "Telefon",
     "email": "E-posta",
     "whatsapp": "WhatsApp",

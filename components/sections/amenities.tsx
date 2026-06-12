@@ -1,6 +1,6 @@
 "use client";
 
-import { Wifi, Coffee, Flower2, Car, Bath, PawPrint } from "lucide-react";
+import { Wifi, Coffee, Flower2, Car, Home, PawPrint } from "lucide-react";
 import type { Dictionary } from "@/lib/dictionaries";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 
@@ -9,7 +9,7 @@ const items = [
   { key: "breakfast", Icon: Coffee },
   { key: "garden", Icon: Flower2 },
   { key: "parking", Icon: Car },
-  { key: "jacuzzi", Icon: Bath },
+  { key: "house", Icon: Home },
   { key: "pet", Icon: PawPrint },
 ] as const;
 

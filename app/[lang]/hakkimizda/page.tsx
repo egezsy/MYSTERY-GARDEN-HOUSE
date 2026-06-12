@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { MapPin } from "lucide-react";
+import { MapPin, Footprints } from "lucide-react";
 import type { Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/dictionaries";
 import { galleryImages } from "@/lib/data/gallery";
@@ -129,10 +129,40 @@ export default function AboutPage({ params }: { params: { lang: Locale } }) {
               {dict.about.locationDesc}
             </p>
           </div>
+
+          {/* Nearby historical sites */}
+          <div className="mb-12">
+            <div className="mx-auto mb-8 max-w-2xl text-center">
+              <span className="label-eyebrow">{dict.about.nearbyLabel}</span>
+              <h3 className="font-serif text-2xl font-bold text-primary sm:text-3xl">
+                {dict.about.nearbyHeading}
+              </h3>
+              <p className="mt-4 text-base leading-relaxed text-charcoal/80">
+                {dict.about.nearbyIntro}
+              </p>
+            </div>
+            <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {dict.about.nearby.map((place) => (
+                <li
+                  key={place.name}
+                  className="flex flex-col gap-2 rounded-xl border border-border bg-cream p-4 shadow-sm"
+                >
+                  <span className="flex items-center gap-1.5 text-sm font-medium text-accent">
+                    <Footprints className="h-4 w-4" />
+                    {place.distance}
+                  </span>
+                  <span className="text-base font-medium leading-snug text-charcoal">
+                    {place.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="overflow-hidden rounded-xl border border-border shadow-md md:rounded-2xl">
             <iframe
               title={dict.contact.mapLabel}
-              src="https://www.openstreetmap.org/export/embed.html?bbox=27.41%2C37.94%2C27.45%2C37.96&layer=mapnik&marker=37.95%2C27.43"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=33.930%2C35.118%2C33.952%2C35.134&layer=mapnik&marker=35.1257%2C33.9410"
               className="h-[320px] w-full md:h-[420px]"
               loading="lazy"
             />

@@ -127,7 +127,7 @@ export default function ContactPage({ params }: { params: { lang: Locale } }) {
             <div className="overflow-hidden rounded-xl border border-border shadow-sm md:rounded-2xl">
               <iframe
                 title={dict.contact.mapLabel}
-                src="https://www.openstreetmap.org/export/embed.html?bbox=27.41%2C37.94%2C27.45%2C37.96&layer=mapnik&marker=37.95%2C27.43"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=33.930%2C35.118%2C33.952%2C35.134&layer=mapnik&marker=35.1257%2C33.9410"
                 className="h-64 w-full"
                 loading="lazy"
               />

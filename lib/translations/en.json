@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Mystery Garden House — Boutique Garden Guest House",
-    "description": "A mysterious yet welcoming escape in the heart of a misty lavender garden. Discover the secret of the garden."
+    "description": "A secret garden guesthouse in the heart of Famagusta's Walled City, in the shadow of ancient walls and 365 historic monuments. A peaceful escape intertwined with nature, at the heart of history."
   },
   "nav": {
     "home": "Home",
@@ -21,9 +21,9 @@
   },
   "story": {
     "label": "Our Story",
-    "heading": "A Garden Hidden in the Mist",
-    "p1": "Mystery Garden House is an escape where time slows down, in the middle of a lavender-scented garden at dusk. Every corner is thoughtfully designed, bringing together the peace of nature with elegant comfort.",
-    "p2": "Wake up to birdsong in the morning, lose yourself in the garden paths during the day, and sip warm tea under the stars in the evening. Here, every guest discovers the garden's own secret.",
+    "heading": "A Garden Hidden Within the Walls",
+    "p1": "Mystery Garden House is a lush sanctuary tucked among centuries-old stones, right at the heart of Famagusta's Walled City, encircled by three kilometres of Venetian walls. The moment you step through our gate, the murmur of the ancient city gives way to birdsong, rustling leaves and the serene quiet of our garden.",
+    "p2": "Among 365 historic monuments bearing the traces of the Lusignan, Venetian, Genoese and Ottoman eras, we bring living history and the peace of nature together in one courtyard. As Birsen and Mustafa Tamer, we opened this garden and our traditional Cyprus home — nurtured with care over many years — to share its secret with you.",
     "cta": "Read Our Story"
   },
   "rooms": {
@@ -38,6 +38,7 @@
     "amenitiesLabel": "Room Features",
     "sizeLabel": "Room Size",
     "bedsLabel": "Bed Configuration",
+    "bathroomNote": "You are staying in an authentic Cyprus house: true to our traditional architecture, the bathroom and WC are located just outside the rooms, only a few steps away — a genuine part of the charm of a centuries-old home.",
     "filters": {
       "all": "All",
       "one": "1 Person",
@@ -48,7 +49,7 @@
     "features": {
       "wifi": "Free WiFi",
       "ac": "Air Conditioning",
-      "privateBathroom": "Private Bathroom",
+      "privateBathroom": "Bathroom & WC (Just Outside)",
       "tv": "Flat-screen TV",
       "kettle": "Electric Kettle",
       "outdoorDining": "Outdoor Dining Area",
@@ -62,12 +63,12 @@
     "label": "What We Offer",
     "heading": "Everything for Your Comfort",
     "items": {
-      "wifi": { "title": "Free WiFi", "desc": "High-speed internet throughout" },
-      "breakfast": { "title": "Garden Breakfast", "desc": "Fresh, organic and local flavours" },
-      "garden": { "title": "Private Garden", "desc": "Lavender paths and quiet corners" },
-      "parking": { "title": "Free Parking", "desc": "Safe and spacious parking area" },
-      "jacuzzi": { "title": "Jacuzzi", "desc": "Private jacuzzi in select rooms" },
-      "pet": { "title": "Pet Friendly", "desc": "Your four-legged friends are welcome too" }
+      "wifi": { "title": "Superb Fast WiFi", "desc": "High-speed internet our guests rave about, throughout the property" },
+      "breakfast": { "title": "Garden Breakfast", "desc": "Enjoy a continental breakfast served in our peaceful garden" },
+      "garden": { "title": "Quiet Garden", "desc": "A serene retreat with friendly pets and cosy seating corners" },
+      "parking": { "title": "Free Parking", "desc": "Free private parking right on the street beside you" },
+      "house": { "title": "Authentic Cyprus House", "desc": "True to traditional architecture, bathrooms and toilets are just outside the rooms, a few steps away" },
+      "pet": { "title": "Friendly Companions", "desc": "Our garden's lovable friends await you with a warm welcome" }
     }
   },
   "stats": {
@@ -83,7 +84,7 @@
     "items": [
       { "name": "Elif & Can", "location": "Istanbul", "text": "The most peaceful place we have ever stayed. The breakfast in the garden was something else. We will definitely come back." },
       { "name": "Sarah M.", "location": "London", "text": "A true hidden paradise. The scent of lavender, the warm welcome and the perfect details... Words fall short." },
-      { "name": "Mehmet Y.", "location": "Ankara", "text": "The night we spent in the Treehouse Cabin was unforgettable. Waking up among the trees is an incredible experience." }
+      { "name": "Mehmet Y.", "location": "Ankara", "text": "Waking up in a garden steeped in history, right beside the ancient walls, was unforgettable. Everything is a five-minute walk away — and the hosts' warmth is something else entirely." }
     ]
   },
   "ctaSection": {
@@ -94,7 +95,7 @@
     "whatsapp": "WhatsApp"
   },
   "footer": {
-    "tagline": "A mysterious yet welcoming escape in a misty lavender garden.",
+    "tagline": "A lush escape hidden in the shadow of ancient walls, in Famagusta's Walled City.",
     "explore": "Explore",
     "contact": "Contact",
     "newsletter": "Join Our Newsletter",
@@ -103,23 +104,36 @@
     "subscribe": "Subscribe",
     "subscribed": "Thank you! Your subscription is received.",
     "rights": "All rights reserved.",
-    "address": "Bahce District, Lavanta Street No:7, Sirince, Izmir"
+    "address": "Walled City, Famagusta, North Cyprus"
   },
   "about": {
     "title": "About Us",
-    "subtitle": "The story of a garden, a house, and countless moments.",
+    "subtitle": "The story of a garden, ancient walls and a warm home.",
     "philosophyLabel": "Our Philosophy",
-    "philosophyHeading": "Living in Harmony with Nature",
-    "philosophyP1": "Mystery Garden House was founded with a respectful, sustainable and simple approach to nature. Every plant in our garden was planted by hand, every stone carefully placed.",
-    "philosophyP2": "Our goal is to offer our guests not just a stay, but a space where they can reconnect with nature, rest, and rediscover themselves.",
-    "hostLabel": "Your Host",
-    "hostName": "Ayse Deniz",
-    "hostRole": "Founder & Host",
-    "hostBio": "I have been the keeper of this garden for ten years. When I left city life behind and returned to nature, I imagined this house as a sanctuary. Today, I am delighted to share this secret with you.",
+    "philosophyHeading": "At the Heart of History, Embraced by Nature",
+    "philosophyP1": "Mystery Garden House is a traditional Cyprus home made of very old, antique structures. We preserve this house — every stone whispering centuries of stories — exactly as it is, in all its authenticity. Here, luxury lies not in show, but in the warmth of living history, in simple beauty and in heartfelt hospitality.",
+    "philosophyP2": "We are a couple devoted to nature, finding joy in life's smallest beauties. We opened our doors because we connect easily with people from all walks of life. Our aim is to offer you not merely a place to stay, but the genuine warmth of a home adorned with painting, ceramics, music and the scent of the garden.",
+    "hostLabel": "Your Hosts",
+    "hostName": "Birsen & Mustafa Tamer",
+    "hostRole": "Your Hosts & Keepers of the Garden",
+    "hostBio": "As Birsen and Mustafa, our days begin in the garden; tending the soil and a patient love for the sea and fishing are our greatest passions. We are warm-hearted, empathetic nature-lovers. We also live surrounded by art: we play the accordion in choirs and create works in painting, ceramics and stained glass — to date we have taken part in 3 solo and many mixed exhibitions. We would be delighted to welcome you in Turkish, English and Greek, and to share our table and our stories.",
     "galleryLabel": "Moments from the Garden",
     "locationLabel": "Location",
-    "locationHeading": "Find Us",
-    "locationDesc": "On the calm hills of Sirince, nestled within nature."
+    "locationHeading": "Right at the Heart of History",
+    "locationDesc": "In the heart of Famagusta's Walled City, encircled by three kilometres of Venetian walls and surrounded by 365 historic monuments.",
+    "nearbyLabel": "Our Surroundings",
+    "nearbyHeading": "A Centuries-Old Heritage at Our Doorstep",
+    "nearbyIntro": "In this unique landscape interwoven with Venetian, Lusignan, Genoese and Ottoman heritage, history's most magnificent landmarks are within walking distance. For those eager to explore, we also offer bicycle rental.",
+    "nearby": [
+      { "name": "St. Nicholas Cathedral (Lala Mustafa Pasha Mosque)", "distance": "5 min walk" },
+      { "name": "Namık Kemal Square & Dungeon", "distance": "5 min walk" },
+      { "name": "Othello Castle", "distance": "5 min walk" },
+      { "name": "Venetian Palace", "distance": "5 min walk" },
+      { "name": "Palm Beach", "distance": "15 min walk" },
+      { "name": "Derinya Public Beach", "distance": "2.2 km" },
+      { "name": "Ayia Napa Monastery", "distance": "19 km" },
+      { "name": "Ercan & Larnaca Airports", "distance": "45 min" }
+    ]
   },
   "gallery": {
     "title": "Gallery",
@@ -140,7 +154,7 @@
     "subtitle": "Reach out to us for your questions and reservations.",
     "infoHeading": "Contact Information",
     "address": "Address",
-    "addressValue": "Bahce District, Lavanta Street No:7, Sirince, Izmir",
+    "addressValue": "Walled City, Famagusta, North Cyprus",
     "phone": "Phone",
     "email": "Email",
     "whatsapp": "WhatsApp",

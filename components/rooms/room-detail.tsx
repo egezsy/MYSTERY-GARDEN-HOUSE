@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Users, BedDouble, Maximize2, Check } from "lucide-react";
+import { Users, BedDouble, Maximize2, Check, Info } from "lucide-react";
 import type { Locale } from "@/lib/i18n-config";
 import type { Dictionary } from "@/lib/dictionaries";
 import type { Room } from "@/lib/data/rooms";
@@ -93,6 +93,13 @@ export function RoomDetail({
             );
           })}
         </ul>
+      </div>
+
+      <div className="flex items-start gap-3 rounded-md border border-accent/30 bg-accent/10 px-4 py-3">
+        <Info className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+        <p className="text-sm leading-relaxed text-charcoal/80">
+          {dict.rooms.bathroomNote}
+        </p>
       </div>
 
       <Button asChild variant="accent" size="lg" className="w-full">
