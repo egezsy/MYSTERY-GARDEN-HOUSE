@@ -12,6 +12,13 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 
 const pillarIcons: LucideIcon[] = [Sparkles, BedDouble, Trees, ShieldCheck];
 
+/**
+ * Columns reference pillar indices. Block 1 merges "En Popüler" (0) with
+ * "Açık Hava & Mutfak" (2) into one column to balance heights; "Oda &
+ * Banyo" (1) and "Hizmetler & Güvenlik" (3) each get their own column.
+ */
+const columns: number[][] = [[0, 2], [1], [3]];
+
 export function Facilities({ dict }: { dict: Dictionary }) {
   const f = dict.facilities;
 
@@ -33,48 +40,58 @@ export function Facilities({ dict }: { dict: Dictionary }) {
           <p className="text-sm leading-relaxed text-charcoal/80">{f.note}</p>
         </Reveal>
 
-        <Stagger className="grid gap-6 md:grid-cols-2 lg:gap-8">
-          {f.pillars.map((pillar, i) => {
-            const Icon = pillarIcons[i] ?? Sparkles;
-            return (
-              <StaggerItem
-                key={pillar.title}
-                className="rounded-2xl border border-border bg-cream p-6 shadow-sm sm:p-7"
-              >
-                <div className="mb-5 flex items-center gap-3">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
-                    <Icon className="h-5 w-5" />
-                  </span>
-                  <h3 className="font-serif text-xl font-semibold text-primary">
-                    {pillar.title}
-                  </h3>
-                </div>
-
-                <div className="space-y-5">
-                  {pillar.groups.map((group, gi) => (
-                    <div key={group.subtitle || gi}>
-                      {group.subtitle && (
-                        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent">
-                          {group.subtitle}
-                        </p>
-                      )}
-                      <ul className="grid gap-x-5 gap-y-2 sm:grid-cols-2">
-                        {group.items.map((item) => (
-                          <li
-                            key={item}
-                            className="flex items-start gap-2 text-base text-charcoal/85"
-                          >
-                            <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
+        <Stagger className="grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {columns.map((col, ci) => (
+            <StaggerItem
+              key={ci}
+              className="rounded-2xl border border-border bg-cream p-5 shadow-sm sm:p-6 lg:p-8"
+            >
+              {col.map((pi, idx) => {
+                const pillar = f.pillars[pi];
+                const Icon = pillarIcons[pi] ?? Sparkles;
+                return (
+                  <div
+                    key={pillar.title}
+                    className={
+                      idx > 0 ? "mt-8 border-t border-border pt-8" : ""
+                    }
+                  >
+                    <div className="mb-5 flex items-center gap-3">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                        <Icon className="h-5 w-5" />
+                      </span>
+                      <h3 className="font-serif text-xl font-semibold text-primary">
+                        {pillar.title}
+                      </h3>
                     </div>
-                  ))}
-                </div>
-              </StaggerItem>
-            );
-          })}
+
+                    <div className="space-y-5">
+                      {pillar.groups.map((group, gi) => (
+                        <div key={group.subtitle || gi}>
+                          {group.subtitle && (
+                            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent">
+                              {group.subtitle}
+                            </p>
+                          )}
+                          <ul className="space-y-2.5">
+                            {group.items.map((item) => (
+                              <li
+                                key={item}
+                                className="flex items-start gap-2 text-base text-charcoal/85"
+                              >
+                                <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </StaggerItem>
+          ))}
         </Stagger>
       </div>
     </section>
