@@ -5,8 +5,9 @@ import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 /**
- * Leaflet's default marker icons break under bundlers because the image
- * URLs are resolved relative to the CSS. Point them at the CDN instead.
+ * Standard blue Leaflet pin. The default marker images break under
+ * bundlers because their URLs are resolved relative to the CSS, so point
+ * them at the CDN instead.
  */
 const markerIcon = L.icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
@@ -36,8 +37,8 @@ export default function LeafletMap({ lat, lng, zoom, label }: LeafletMapProps) {
       style={{ height: "100%", width: "100%" }}
     >
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.google.com/maps">Google Maps</a>'
+        url="https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}"
       />
       <Marker position={[lat, lng]} icon={markerIcon}>
         <Popup>{label}</Popup>
